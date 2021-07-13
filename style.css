@@ -1,0 +1,105 @@
+/* Images make everything better! Well, depending what sort of images... */
+.header_image{
+  width: 70px;
+}
+.small_icons{
+  width: 12px;
+}
+.about_image{
+  width: 125px;
+  float: left;
+  margin-right: 20px;
+  margin-left: 50px;
+  border-radius: 25px;
+}
+/* Making text look pretty :3 */
+h1{
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: coral;
+  font-size: 70px;
+  text-align: center;
+  font-family: 'Rubik', sans-serif;
+}
+h2 {
+  font-size: 40px;
+  margin-left: 50px;
+  margin-right: 50px;
+  text-align: left;
+  font-family: 'Rubik', sans-serif;
+  color: coral
+}
+a{
+  color: coral;
+  text-decoration: none;
+  transition: all 0.1s;
+}
+a:hover{
+  font-weight: bolder;
+  color: white;
+}
+#header_two_text{
+  font-size: 18px;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 150px;
+}
+
+/* Guess where this is */
+#font_correction{
+  font-family: "Lato", sans-serif;
+  transition: all 5s;
+}
+#font_correction:hover{
+  color: red;
+}
+
+#bottom_text_uwu{
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
+#impotant_creature{
+  font-weight: bold;
+  color: cadetblue;
+}
+/* I have no clue why I added this, but it's here! */
+#spotify_player{
+  border-radius: 30px;
+  transition: all 0.1s;
+}
+#spotify_player:hover{
+  border-radius: 10px;
+}
+/* Push all the buttonsssssssssssssss */
+/* I cheated a bit with the boxes and it's not code I written :p */
+#button{
+  border-color: inherit;
+  color: coral;
+  border-radius: 15px;
+  display:inline-block;
+  padding:3px 3px;
+  margin:2px;
+  border:2px solid coral;
+  box-sizing: border-box;
+  margin: 10px;
+  transition: all 0.1s;
+}
+#button:hover{
+  color: white;
+  border-color: white;
+  border-radius: 10px;
+}
+
+#button_row{
+  position: center;
+  text-align: center;
+}
+#back_to_top{
+  text-align: center;
+}
+/* Now all the site needs is some legs, hands and a head */
+body{
+  color: white;
+  font-family: "Lato", sans-serif;
+  background: linear-gradient(to bottom,#253652,#354c73)
+}
