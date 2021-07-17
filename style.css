@@ -1,6 +1,6 @@
 /* Images make everything better! Well, depending what sort of images... */
 .header_image{
-  width: 6vw;
+  width: 7vw;
 }
 
 .small_icons{
@@ -8,11 +8,38 @@
 }
 
 .about_image{
-  width: 125px;
+  width: 160px;
   float: left;
-  margin-right: 20px;
-  margin-bottom: 20px;
-  border-radius: 25px;
+  margin-right: 15px;
+  border-radius: 30px;
+}
+
+.photos{
+  height: 25vw;
+  width: 15vw;
+  object-fit: cover;
+  border-radius: 30px;
+  transition-duration: 0.2s;
+}
+
+.photos:hover{
+  border-radius: 0px;
+  width: 30vw;
+  object-fit: contain;
+  margin: 0px 20px
+}
+
+#image_text{
+  border-radius: 30px;
+  display: flex;
+  overflow-x: scroll;
+  width: 100%;
+}
+
+@media (max-width:621px) { /* heheheheh 621... I'm so childish */
+  img.header_image {
+    display: none;
+  }
 }
 
 /* Making text look pretty :3 */
@@ -43,21 +70,27 @@ h2{
 a{
   color: coral;           /* color */
   text-decoration: none;  /* animation */
-  transition: all 0.1s;
+  transition-duration: 0.1s;
 }
 a:hover{
   font-weight: bolder;
   color: white;
 }
 
+p{
+  /* font-family: 'Roboto Mono', monospace; */
+}
+
 #introduction_to_fluffy,
 #about_fluffy,
 #more_on_fluffy,
-#social_media{
+#social_media,
+#image_gallery{
+  transition-duration: 0.1s;
   font-size: 18px;        /* font */
-  margin-left: 4vw;      /* spacing */
-  margin-right: 4vw;
-  margin-bottom: 7vw;
+  margin-left: 3vw;      /* spacing */
+  margin-right: 5vw;
+  margin-bottom: 6vw;
 }
 
 #font_correction{
@@ -80,7 +113,7 @@ a:hover{
 
 #fluffy_color{
   font-weight: bold;      /* Not so important! */
-  color: orange;
+  color: #FB9645;
 }
 
 #social_media_list{
@@ -122,7 +155,6 @@ footer{
   text-align: center;
   justify-content: center;
   align-items: center;
-  margin: 0px 2vw;
 }
 
 #footer_button{
@@ -134,13 +166,14 @@ body{
   font-family: "Lato", sans-serif;
   background: linear-gradient(to bottom,#253652,#354c73);   /* background */
   display: grid;
-  grid-template-columns: 100%;                           /* grid */
-  grid-template-rows: auto auto auto auto auto auto auto;
+  grid-template-columns: 100%;                             /* grid */
+  grid-template-rows: auto auto auto auto auto auto auto auto;
   grid-template-areas:  "header"
                         "#navigation_row_top"
                         "#introduction_to_fluffy"
                         "#about_fluffy"
                         "#more_on_fluffy"
+                        "#image_gallery"
                         "#social_media"
                         "footer";
 }
