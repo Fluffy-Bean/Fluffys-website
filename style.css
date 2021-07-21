@@ -15,32 +15,41 @@
 }
 
 .photos{
-  height: 25vw;
-  width: 15vw;
+  height: 500px;
+  width: 300px;
   object-fit: cover;
   border-radius: 30px;
   transition-duration: 0.2s;
+  transition: all 0.2s;
 }
 
-.photos:hover{
-  border-radius: 0px;
-  width: 30vw;
-  object-fit: contain;
-  margin: 0px 20px
+@media (min-width:621px) { /* heheheheh 621... I'm so childish */
+  .photos:hover{
+    width: 500px;
+    margin: 0 10px;
+  }
 }
 
 #image_text{
   border-radius: 30px;
   display: flex;
   overflow-x: scroll;
+  -ms-overflow-style: none; /* IE and EDGE */
+  scrollbar-width: none;  /* Firefogie */
   width: 100%;
 }
 
-@media (max-width:621px) { /* heheheheh 621... I'm so childish */
+#image_text::-webkit-scrollbar {
+  display: none;  /* everything else */
+}
+
+@media (max-width:621px) { /* heheheheh 621... again..... :3 */
   img.header_image {
     display: none;
   }
 }
+
+
 
 /* Making text look pretty :3 */
 h1{
@@ -59,6 +68,7 @@ header{
   margin-left: 4vw;      /* spacing */
   margin-right: 4vw;
 }
+
 
 h2{
   color: coral;           /* color */
@@ -85,23 +95,24 @@ p{
 #about_fluffy,
 #more_on_fluffy,
 #social_media,
-#image_gallery{
+#image_gallery,
+#other_sections{
   transition-duration: 0.1s;
   font-size: 18px;        /* font */
   margin-left: 3vw;      /* spacing */
-  margin-right: 5vw;
+  margin-right: 3vw;
   margin-bottom: 6vw;
+}
+
+#about_text{
+  text-align: justify;
 }
 
 #font_correction{
   font-family: "Lato", sans-serif;    /* font */
-  transition: all 5s;                 /* animation */
-}
-#font_correction:hover{
-  color: red;
 }
 
-#bottom_text_uwu{
+#footer_text{
   font-family: 'Open Sans', sans-serif;   /* font */
   text-align: center;                     /* spacing */
 }
@@ -160,11 +171,38 @@ footer{
 #footer_button{
   text-align: center;
 }
+
+@media (max-width:340px){ /* heheheheh 621... I'm so childish */
+  #extra_e{
+    display: none;
+  }
+}
 /* Now all the site needs is some legs, hands and a head */
+html{
+  background: #354c73;
+}
+
+@media (min-width:1300px) {
+  body {
+    border-radius: 30px;
+    margin: 50px auto 50px auto;
+    background: #253652;
+  }
+}
+
+@media (max-width:1300px) { /* heheheheh 621... again..... :3 */
+  body {
+    border-radius: 0;
+    margin: 0;
+    background: linear-gradient(to bottom, #253652, #354c73 );
+  }
+}
+
 body{
+  border: 0px solid;
+  max-width: 1300px;
   color: white;                                             /* font */
   font-family: "Lato", sans-serif;
-  background: linear-gradient(to bottom,#253652,#354c73);   /* background */
   display: grid;
   grid-template-columns: 100%;                             /* grid */
   grid-template-rows: auto auto auto auto auto auto auto auto;
