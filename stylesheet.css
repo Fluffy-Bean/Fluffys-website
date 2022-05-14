@@ -1,0 +1,177 @@
+/* Page style */
+@import url(https://cdn.jsdelivr.net/gh/tonsky/FiraCode@5.2/distr/fira_code.css);
+:root {
+	font-size: 17px;
+	--bg: #151515;
+	--bg-alt: #E8E3E3;
+	--fg: #E8E3E3;
+  --rad: 20px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+::-webkit-scrollbar {
+	display: none;
+}
+* {
+  font-family: 'Fira Code', monospace;
+  font-weight: 369;
+  color: var(--fg);
+	transition-timing-function: ease-out;
+	transition: 0.1s;
+}
+
+
+
+@media (max-width:1200px) {
+	.rootContainer{
+		display: flex;
+		flex-direction: column;
+	}
+	body{
+		margin: 2vh;
+	}
+	img {
+		width: 169px;
+	}
+	.textContainer {
+		width: auto;
+	}
+	.textContainer,
+	.profileContainer {
+		padding: 1vh;
+	}
+	.paragraph {
+		text-align: justify;
+	}
+}
+@media (min-width:1200px) {
+	.rootContainer{
+		display: flex;
+		flex-direction: row;
+	}
+	body {
+		min-height: 86vh;
+		margin: 6vh;
+	}
+	img {
+		width: 269px;
+	}
+	.textContainer {
+		width: 100%;
+	}
+	.textContainer,
+	.profileContainer {
+		padding: 2vh;
+	}
+}
+
+
+
+img {
+	margin: 2em;
+	border-radius: 50%;
+	box-shadow: 0px 2px 15px #000000;
+}
+
+
+
+.profileLinks {
+	float: left;
+}
+a {
+  font-weight: 500;
+  text-decoration: none;
+}
+a:hover {
+  font-weight: 800;
+}
+a:visited {
+  text-decoration: underline;
+}
+a.button {
+	display: block;
+	padding: 0.35em 1.2em;
+	border: 0.12em solid var(--fg);
+	margin: 0 0.3em 0.3em 0;
+	border-radius: 0.5em;
+	box-sizing: border-box;
+	text-decoration: none;
+	text-align: center;
+}
+
+
+
+h1,
+h2 {
+	  font-weight: 450;
+		color: #E0863E;
+}
+/* Funky colours */
+.cartyColour {
+	color: #C29356;
+}
+.jeetixColour {
+	color: cadetblue;
+}
+.fluffyColour {
+	color: #FB9645;
+}
+.cartyColour,
+.jeetixColour,
+.fluffyColour {
+	font-weight: 500;
+}
+
+/* Link colours */
+.twitterColour {
+	color: #1D9BF0;
+}
+.telegramColour {
+	color: #1C93E3;
+}
+.githubColour {
+	color: #F0F6FC;
+}
+.steamColour {
+	color: #C5C3C0;
+}
+.discordColour {
+	color: #5865F2;
+}
+.discord,
+.discordColour {
+	font-weight: 500;
+}
+
+
+.paragraph {
+	margin: 12px;
+	color: #DADADA;
+}
+.textContainer,
+.profileContainer {
+	padding: 2vh;
+	display: flex;
+	flex-direction: column;
+}
+.profileContainer {
+	text-align: center;
+	align-items: center;
+}
+
+
+
+footer {
+	text-align: center;
+	align-items: center;
+}
+body {
+  background-color: var(--bg);
+	box-shadow: 0px 4px 20px var(--bg);
+	border-radius: 1em;
+}
+html {
+	margin: 0;
+	padding: 0;
+  background-color: var(--bg-alt);
+}
