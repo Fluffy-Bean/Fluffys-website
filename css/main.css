@@ -1,0 +1,94 @@
+/*
+  Main
+*/
+main section {
+  margin: 3rem 0; padding: 1rem;
+  width: auto;
+
+  background-color: var(--bg); color: var(--fg);
+
+  border-radius: var(--rad);
+
+  box-shadow: var(--shadow);
+}
+main section * {
+  margin: 0 0 0.7rem; padding: 0;
+  max-width: 100%; width: auto; min-width: none;
+  height: auto;
+
+  border-radius: 5px;
+}
+main section *:last-child {
+  margin-bottom: 0;
+}
+
+/*
+  I hate CSS
+*/
+#intro {
+  text-align: center;
+}
+#experiance img {
+  margin: 0 auto;
+  display: block;
+}
+#spotify {
+  display: flex;
+  flex-direction: column;
+}
+
+/*
+  Sona colours
+*/
+/*
+.cFF7700{background-color: var(--bandana-0);}
+.cFFDC00{background-color: var(--bandana-1);}
+.c00D621{background-color: var(--bandana-2);}
+.c0088FF{background-color: var(--bandana-3);}
+*/
+/*
+  Gallery
+*/
+.gallery-image {
+  width: 100%; height: 30rem;
+  object-fit: contain;
+
+  background-color: #000;
+}
+
+.gallery {
+  margin: 0; padding: 0;
+  height: 10rem;
+
+  display: flex; flex-direction: row;
+  overflow-x: scroll;
+
+  user-select: none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.gallery::-webkit-scrollbar {
+  display: none;
+}
+.gallery img {
+  margin: 0 0.5rem;
+
+  height: 10rem; width: 12rem;
+
+  object-fit: cover;
+
+  user-select: none;
+
+	transition: transform 0.1s ease-out;
+}
+.gallery img:hover {
+  margin: -0.25rem 0.25rem;
+  border: 0.25rem var(--green) solid;
+  transform: scale(0.9);
+}
+.gallery img:first-child {
+  margin-left: 0;
+}
+.gallery img:last-child {
+  margin-right: 0;
+}

@@ -1,0 +1,26 @@
+/*
+  Footer
+*/
+
+footer {
+  margin: auto; padding: 1rem;
+  width: auto;
+
+  display: flex; flex-direction: row; flex-wrap: wrap;
+  justify-content: space-around; align-items: center;
+
+  background-color: var(--bg); color: var(--fg);
+
+  border-radius: var(--rad);
+
+  box-shadow: var(--shadow);
+}
+footer * {
+  margin: 0; padding: 0;
+  display: block;
+}
+footer div {
+  width: 18rem;
+  justify-content: center; align-content: center;
+  text-align: center;
+}

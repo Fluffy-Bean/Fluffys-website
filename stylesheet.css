@@ -1,177 +1,115 @@
-/* Page style */
-@import url(https://cdn.jsdelivr.net/gh/tonsky/FiraCode@5.2/distr/fira_code.css);
-:root {
-	font-size: 17px;
-	--bg: #151515;
-	--bg-alt: #E8E3E3;
-	--fg: #E8E3E3;
-  --rad: 20px;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+@import "css/nav.css";
+@import "css/main.css";
+@import "css/footer.css";
+
+@font-face {
+  font-family: "Rubik", sans-serif;
+  src: url(fonts/Rubik.ttf);
 }
-::-webkit-scrollbar {
-	display: none;
+@font-face {
+  font-family: "Lexend Deca", sans-serif;
+  src: url(fonts/LexendDeca.ttf);
+}
+@font-face {
+  font-family: 'Fira Code', monospace;
+  src: url(fonts/FiraCode.ttf);
+}
+
+:root {
+  --bg: #151515;
+  --bg-alt: #E8E3E3;
+
+  --h: #8C977D;
+  --fg:#E8E3E3;
+  --fg-dark: #151515;
+
+  --shadow: 6px 6px 10px #15151588;
+  --rad: 15px;
+
+  --orange: #FF7700;
+  --orange-alt: #E0863E;
+  --green: #8C977D;
+
+  /* refsheet colours */
+  --bandana-0: #FF7700;
+  --bandana-1: #FFDC00;
+  --bandana-2: #00D621;
+  --bandana-3: #0088FF;
+
+  --fur-0: #FF851B;
+  --fur-1: #FFF3BB;
+  --fur-2: #613700;
+
+  --beans: #FEBBEC;
+  --eye: #C859C9;
 }
 * {
-  font-family: 'Fira Code', monospace;
-  font-weight: 369;
-  color: var(--fg);
-	transition-timing-function: ease-out;
-	transition: 0.1s;
+  font-family: "Fira Code", monospace;
+  font-weight: 450;
 }
 
+html {
+  margin: 0; padding: 0;
 
+  background-color: var(--bg-alt);
+  background-image: url("images/bg-alt.png");
 
-@media (max-width:1200px) {
-	.rootContainer{
-		display: flex;
-		flex-direction: column;
-	}
-	body{
-		margin: 2vh;
-	}
-	img {
-		width: 169px;
-	}
-	.textContainer {
-		width: auto;
-	}
-	.textContainer,
-	.profileContainer {
-		padding: 1vh;
-	}
-	.paragraph {
-		text-align: justify;
-	}
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
-@media (min-width:1200px) {
-	.rootContainer{
-		display: flex;
-		flex-direction: row;
-	}
-	body {
-		min-height: 86vh;
-		margin: 6vh;
-	}
-	img {
-		width: 269px;
-	}
-	.textContainer {
-		width: 100%;
-	}
-	.textContainer,
-	.profileContainer {
-		padding: 2vh;
-	}
+body {
+  margin: 0 auto; padding: 1rem;
+  max-width: 969px; width: auto; min-width: none;
+
+  background-color: var(--bg-alt);
+  background: none;
 }
 
-
-
-img {
-	margin: 2em;
-	border-radius: 50%;
-	box-shadow: 0px 2px 15px #000000;
+h1,h2,h3 {
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 600;
+  color: var(--h);
+}
+h1 {
+  font-size: 40px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 20px;
 }
 
-
-
-.profileLinks {
-	float: left;
-}
 a {
-  font-weight: 500;
-  text-decoration: none;
+  color: var(--green);
 }
 a:hover {
-  font-weight: 800;
+  color: var(--orange);
+  font-weight: bolder;
+}
+a:focus {
+  color: var(--orange);
+}
+a:active {
+  color: var(--orange-alt);
 }
 a:visited {
   text-decoration: underline;
 }
-a.button {
-	display: block;
-	padding: 0.35em 1.2em;
-	border: 0.12em solid var(--fg);
-	margin: 0 0.3em 0.3em 0;
-	border-radius: 0.5em;
-	box-sizing: border-box;
-	text-decoration: none;
-	text-align: center;
-}
 
-
-
-h1,
-h2 {
-	  font-weight: 450;
-		color: #E0863E;
-}
-/* Funky colours */
 .cartyColour {
 	color: #C29356;
+  font-weight: bold;
 }
+
 .jeetixColour {
 	color: cadetblue;
+  font-weight: bold;
 }
+
 .fluffyColour {
 	color: #FB9645;
-}
-.cartyColour,
-.jeetixColour,
-.fluffyColour {
-	font-weight: 500;
-}
-
-/* Link colours */
-.twitterColour {
-	color: #1D9BF0;
-}
-.telegramColour {
-	color: #1C93E3;
-}
-.githubColour {
-	color: #F0F6FC;
-}
-.steamColour {
-	color: #C5C3C0;
-}
-.discordColour {
-	color: #5865F2;
-}
-.discord,
-.discordColour {
-	font-weight: 500;
-}
-
-
-.paragraph {
-	margin: 12px;
-	color: #DADADA;
-}
-.textContainer,
-.profileContainer {
-	padding: 2vh;
-	display: flex;
-	flex-direction: column;
-}
-.profileContainer {
-	text-align: center;
-	align-items: center;
-}
-
-
-
-footer {
-	text-align: center;
-	align-items: center;
-}
-body {
-  background-color: var(--bg);
-	box-shadow: 0px 4px 20px var(--bg);
-	border-radius: 1em;
-}
-html {
-	margin: 0;
-	padding: 0;
-  background-color: var(--bg-alt);
+  font-weight: bold;
 }

@@ -1,0 +1,40 @@
+/*
+  Nav
+*/
+nav {
+  margin: auto; padding: 1rem;
+  width: auto;
+
+  position: sticky; top: 1rem;
+
+  display: flex; flex-direction: row;
+  justify-content: space-between; align-items: center;
+
+  background-color: var(--bg-alt); color: var(--fg-dark);
+
+  border-radius: var(--rad);
+
+  box-shadow: var(--shadow);
+}
+nav * {
+  margin: 0; padding: 0;
+}
+nav img {
+  margin: 0; padding: 0;
+  height: 2rem; width: auto;
+
+  transform: rotate(-25deg) scale(3.2);
+
+  filter: drop-shadow(1px 0 0 var(--bg-alt))
+          drop-shadow(0 1px 0 var(--bg-alt))
+          drop-shadow(-1px 0 0 var(--bg-alt))
+          drop-shadow(0 -1px 0 var(--bg-alt));
+}
+
+nav div * {
+  margin: 0 0.2rem; padding: 0;
+
+  text-align: right;
+
+  font-weight: bolder;
+}
