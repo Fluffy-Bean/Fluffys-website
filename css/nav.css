@@ -19,7 +19,11 @@ nav {
 nav * {
   margin: 0; padding: 0;
 }
-nav img {
+
+.nav-logo {
+  display: flex; flex-direction: row;
+}
+.nav-logo img {
   margin: 0; padding: 0;
   height: 2rem; width: auto;
 
@@ -30,11 +34,23 @@ nav img {
           drop-shadow(-1px 0 0 var(--bg-alt))
           drop-shadow(0 -1px 0 var(--bg-alt));
 }
+.nav-logo h2 {
+  margin: 0 0 0 2rem; padding: 0;
+  font-size: 28px;
+  font-weight: 900;
+}
+@media (max-width:569px) {
+  .nav-logo h2 {
+    display: none;
+  }
+}
 
-nav div * {
+.nav-links * {
   margin: 0 0.2rem; padding: 0;
 
-  text-align: right;
+  color: var(--fg-dark);
+
+  text-align: right; text-decoration: none;
 
   font-weight: bolder;
 }

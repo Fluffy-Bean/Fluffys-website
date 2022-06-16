@@ -14,12 +14,17 @@ main section {
 main section * {
   margin: 0 0 0.7rem; padding: 0;
   max-width: 100%; width: auto; min-width: none;
-  height: auto;
 
   border-radius: 5px;
 }
 main section *:last-child {
   margin-bottom: 0;
+}
+main section img {
+  height: auto;
+}
+.justify-text p {
+  text-align: justify;
 }
 
 /*
@@ -28,7 +33,7 @@ main section *:last-child {
 #intro {
   text-align: center;
 }
-#experiance img {
+#experience img {
   margin: 0 auto;
   display: block;
 }
@@ -37,15 +42,6 @@ main section *:last-child {
   flex-direction: column;
 }
 
-/*
-  Sona colours
-*/
-/*
-.cFF7700{background-color: var(--bandana-0);}
-.cFFDC00{background-color: var(--bandana-1);}
-.c00D621{background-color: var(--bandana-2);}
-.c0088FF{background-color: var(--bandana-3);}
-*/
 /*
   Gallery
 */

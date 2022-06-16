@@ -2,18 +2,20 @@
 @import "css/main.css";
 @import "css/footer.css";
 
+/*
 @font-face {
   font-family: "Rubik", sans-serif;
-  src: url(fonts/Rubik.ttf);
+  src: url(fonts/Rubik.ttf) format('truetype');
 }
 @font-face {
   font-family: "Lexend Deca", sans-serif;
-  src: url(fonts/LexendDeca.ttf);
+  src: url(fonts/LexendDeca.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Fira Code', monospace;
-  src: url(fonts/FiraCode.ttf);
+  src: url(fonts/FiraCode.ttf) format('truetype');
 }
+*/
 
 :root {
   --bg: #151515;
@@ -44,14 +46,13 @@
   --eye: #C859C9;
 }
 * {
-  font-family: "Fira Code", monospace;
-  font-weight: 450;
+  font-weight: 400;
 }
 
 html {
   margin: 0; padding: 0;
 
-  background-color: var(--bg-alt);
+  background-color: #817670;
   background-image: url("images/bg-alt.png");
 
   background-position: center;
@@ -67,6 +68,10 @@ body {
   background: none;
 }
 
+p,a {
+  font-family: "Fira Code", monospace;
+}
+
 h1,h2,h3 {
   font-family: "Lexend Deca", sans-serif;
   font-weight: 600;
@@ -79,11 +84,13 @@ h2 {
   font-size: 30px;
 }
 h3 {
-  font-size: 20px;
+  font-size: 23px;
 }
 
 a {
   color: var(--green);
+  text-decoration: none;
+  font-weight: bold;
 }
 a:hover {
   color: var(--orange);
@@ -99,17 +106,21 @@ a:visited {
   text-decoration: underline;
 }
 
-.cartyColour {
+span {
+  display: inline;
+}
+
+.carty-colour {
 	color: #C29356;
   font-weight: bold;
 }
 
-.jeetixColour {
+.jeetix-colour {
 	color: cadetblue;
   font-weight: bold;
 }
 
-.fluffyColour {
-	color: #FB9645;
+.fluffy-colour {
+	color: #FF851B;
   font-weight: bold;
 }
