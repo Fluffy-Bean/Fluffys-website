@@ -86,12 +86,28 @@
 			<p>To <span class="jeetix-colour">Jeetix</span> for helping me with learning how to make websites and keeping the original site up and running!</p>
 			<p>And to <span class="carty-colour">Carty</span> for teaching me how to run servers and the networking required to keep sites online!</p>
 			<p><span class="mrhdash-colour">mrHDash</span> for the <a href="#refsheet">Ref Sheet</a> and most other art on the page!</p>
-			<p>To <span class="zadok-colour">Zadok</span> for the silly tadium art in the nav bar!</p>
+			<p>To <span class="zadok-colour">Zadok</span> for the silly taidum art in the nav bar!</p>
 		</section>
 
 		<section id="gallery">
 			<h2>Random pictures lol</h2>
 			<img src="gallery/fluffy_VRchat-meet-2021.webp" class="gallery-image">
+			<!--
+			<div class="filter-list">
+				<div>
+					<p>Blur</p>
+				</div>
+				<div>
+					<p>Grayscale</p>
+				</div>
+				<div>
+					<p>Hue</p>
+				</div>
+				<div>
+					<p>Saturation</p>
+				</div>
+			</div>
+			-->
 			<div class="gallery" draggable="false">
 				<?php
 				$images = glob("gallery/*.{jpg,jpeg,png,webp,gif}", GLOB_BRACE);
@@ -131,14 +147,29 @@
 			<iframe src="https://open.spotify.com/embed/playlist/5e4iqBdioVN56hz1KCYWNi?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
 			<iframe src="https://open.spotify.com/embed/playlist/37vWcad8w7GBvNIZUkDxEi?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
 
-			<h3>Artists I enjoy</h3>
+			<h3>Music flavours</h3>
+			<h4>Rock/Metal</h4>
 			<p>Bring me the Horizon</p>
-			<p>acloudyskye</p>
-			<p>Gorillaz</p>
-			<p>Conro</p>
 			<p>Pink Floyed</p>
 			<p>Ocean Colour Scene</p>
-			<p>More coming soon!</p>
+			<p>Oasis</p>
+			<p>Fleetwood Mac</p>
+			<p>Stereophonics</p>
+
+			<h4>EDM/Electronic</h4>
+			<p>acloudyskye</p>
+			<p>Conro</p>
+			<p>Pixel Terror</p>
+
+			<h4>Other</h4>
+			<p>Gorillaz</p>
+			<p>M38</p>
+			<p>C148</p>
+			<p>The Rare Occasion</p>
+			<p>Joywave</p>
+
+			<h3>Well...</h3>
+			<p>I listen to everything, but feel free to complain to me about my choices!</p>
 		</section>
 	</main>
 
@@ -150,7 +181,7 @@
 		</div>
 		<div>
 			<h3>Page status</h3>
-			<p>Last updated 16 Jun 2022</p>
+			<p>Last updated 17 Jun 2022</p>
 			<p>Made and designed by <span class="fluffy-colour">Fluffy</span></p>
 		</div>
 		<div>

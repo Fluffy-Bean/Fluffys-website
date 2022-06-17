@@ -46,10 +46,13 @@ main section img {
   Gallery
 */
 .gallery-image {
+  padding: 0;
   width: 100%; height: 30rem;
   object-fit: contain;
 
-  background-color: #000;
+  display: block;
+
+  background-color: var(--bg-dark);
 }
 
 .gallery {
@@ -69,27 +72,6 @@ main section img {
 .gallery::-webkit-scrollbar {
   display: none;
 }
-
-/*
-#gallery::before,#gallery::after {
-  content: "";
-
-  width: 5rem; height: 10rem;
-  display: block;
-
-  position: absolute; bottom: 1rem;
-}
-#gallery::before {
-  left: 1rem;
-
-  background: linear-gradient(to right, var(--bg) 0%, transparent 100%);
-}
-#gallery::after {
-  right: 1rem;
-
-  background: linear-gradient(to left, var(--bg) 0%, transparent 100%);
-}
-*/
 
 .gallery img {
   margin: 0 0.5rem;
@@ -113,4 +95,40 @@ main section img {
 }
 .gallery img:last-child {
   margin-right: 0;
+}
+
+/*
+  Filter
+*/
+.filter-list {
+  margin: 0 0 1rem 0; padding: 0;
+  width: 100%;
+  display: flex; flex-direction: row;
+
+  justify-content: space-between;
+}
+
+.filter-list div {
+  margin: 0 1rem 0 0; padding: 0.5rem;
+  width: 15rem; min-width: 8rem;
+  height: 1.5rem;
+
+  display: flex;
+  justify-content: center; align-items: center;
+
+  text-align: center;
+
+  background-color: var(--bg-dark);
+}
+@media (max-width:750px) {
+  .filter-list {
+    flex-direction: column;
+  }
+  .filter-list div {
+    margin: 0 0 1rem 0;
+    width: auto;
+  }
+}
+.filter-list div:last-child {
+  margin: 0;
 }
