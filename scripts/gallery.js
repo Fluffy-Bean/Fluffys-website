@@ -13,12 +13,18 @@ slider.addEventListener("mousedown", (e) => {
   isDown = true;
   startX = e.pageX - slider.offsetLeft;
   scrollLeft = slider.scrollLeft;
+
+  document.querySelector(".gallery").style.cursor= "grabbing";
 });
 slider.addEventListener("mouseleave", () => {
   isDown = false;
+
+  document.querySelector(".gallery").style.cursor= "grab";
 });
 slider.addEventListener("mouseup", () => {
   isDown = false;
+
+  document.querySelector(".gallery").style.cursor= "grab";
 });
 slider.addEventListener("mousemove", (e) => {
   if (!isDown) return;

@@ -63,9 +63,34 @@ main section img {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+.gallery:hover {
+  cursor: grab;
+}
 .gallery::-webkit-scrollbar {
   display: none;
 }
+
+/*
+#gallery::before,#gallery::after {
+  content: "";
+
+  width: 5rem; height: 10rem;
+  display: block;
+
+  position: absolute; bottom: 1rem;
+}
+#gallery::before {
+  left: 1rem;
+
+  background: linear-gradient(to right, var(--bg) 0%, transparent 100%);
+}
+#gallery::after {
+  right: 1rem;
+
+  background: linear-gradient(to left, var(--bg) 0%, transparent 100%);
+}
+*/
+
 .gallery img {
   margin: 0 0.5rem;
 
@@ -75,13 +100,14 @@ main section img {
 
   user-select: none;
 
-	transition: transform 0.1s ease-out;
+	transition: transform 0.2s cubic-bezier(.58,.01,.07,1);
 }
 .gallery img:hover {
   margin: -0.25rem 0.25rem;
   border: 0.25rem var(--green) solid;
   transform: scale(0.9);
 }
+
 .gallery img:first-child {
   margin-left: 0;
 }
