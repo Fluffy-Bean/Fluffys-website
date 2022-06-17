@@ -56,10 +56,37 @@
 			<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Fluffy-Bean&layout=compact">
 		</section>
 
+		<section id="pc" class="justify-text">
+			<h2>System configuration</h2>
+			<h3>Operating system</h3>
+			<img src="images/sussywussy.png" alt="Screenshot of Linux desktop environment" loading="lazy">
+			<p>My main operating system is Arch Linux, in this screenshot you can see a "rice" of Rofi and Polybar! Which you can see <a href="https://github.com/Fluffy-Bean/dots">here</a>!</p>
+			<p>My secondary system is Windows 10 Pro just for VR</p>
+
+			<h3>Hardware</h3>
+			<p>For my PC case, I'm using an NZXT H510 (white) covered with a bunch of stickers and magnets.</p>
+			<p>But for whats inside is a bit more interesting. I am using a Gigabyte X570 AORUS ELITE motherboard, pared with an AMD 5 3600. Cooling that is a be quiet! Pure Rock 2.</p>
+			<p>Thats with 16GBs (2x8) of DDR4-3600 ram from Corsair, with an Nvidia GTX1060 (6gb) Zotac AMP edition.</p>
+			<p>Which is all powered by a Corsair 550W 80+ Gold power supply.</p>
+			<p>For storage I am using a Hitachi Deskstar that has 2TBs of storage for my games and larger files. For my boot SSD I am using a Samsung 980 1TB M.2 NVMe.</p>
+
+			<h3>Equipment</h3>
+			<p>My keyboard is a Razer Blackwiddow X Chroma that has been through too much. To go with that I have a Logitech g502 mouse with a Hyena Agenda mouse mat.</p>
+			<p>For my monitor I have a BenQ MOBIUZ EX2510. For VR I have a normal CV1 with 2 cameras.</p>
+			<p>Headphones are very important to me, as I use them for hours at a time everyday and listen to a lot of music, so I got myself Steelseries Arctis 3 (only to be very dissapointed with the mic and build quality). I also enjoy playing some games with a controller so I have a modded Xbox One S controller.</p>
+
+			<h3>Server</h3>
+			<p>My server is a simple Zotac ZBOX-CI527.</p>
+			<p>It still has the base 8GBs of ram and i5-7200U CPU. But I upgraded it with a 120GB SSD.</p>
+			<p>And it is running a Proxmox server with many many LXC containers because why not :3</p>
+		</section>
+
 		<section class="justify-text">
 			<h2>Special Thanks</h2>
 			<p>To <span class="jeetix-colour">Jeetix</span> for helping me with learning how to make websites and keeping the original site up and running!</p>
 			<p>And to <span class="carty-colour">Carty</span> for teaching me how to run servers and the networking required to keep sites online!</p>
+			<p><span class="mrhdash-colour">mrHDash</span> for the <a href="#refsheet">Ref Sheet</a> and most other art on the page!</p>
+			<p>To <span class="zadok-colour">Zadok</span> for the silly tadium art in the nav bar!</p>
 		</section>
 
 		<section id="gallery">
@@ -97,36 +124,21 @@
 			<p>Why can't electric eels get depressed? Because they're always positive!</p>
 		</section>
 
-		<section id="pc" class="justify-text">
-			<h2>System configuration</h2>
-			<h3>Operating system</h3>
-			<img src="images/sussywussy.png" alt="Screenshot of Linux desktop environment" loading="lazy">
-			<p>My main operating system is Arch Linux, in this screenshot you can see a "rice" of Rofi and Polybar! Which you can see <a href="https://github.com/Fluffy-Bean/dots">here</a>!</p>
-			<p>My secondary system is Windows 10 Pro just for VR</p>
-
-			<h3>Hardware</h3>
-			<p>For my PC case, I'm using an NZXT H510 (white) covered with a bunch of stickers and magnets.</p>
-			<p>But for whats inside is a bit more interesting. I am using a Gigabyte X570 AORUS ELITE motherboard, pared with an AMD 5 3600. Cooling that is a be quiet! Pure Rock 2.</p>
-			<p>Thats with 16GBs (2x8) of DDR4-3600 ram from Corsair, with an Nvidia GTX1060 (6gb) Zotac AMP edition.</p>
-			<p>Which is all powered by a Corsair 550W 80+ Gold power supply.</p>
-			<p>For storage I am using a Hitachi Deskstar that has 2TBs of storage for my games and larger files. For my boot SSD I am using a Samsung 980 1TB M.2 NVMe.</p>
-
-			<h3>Equipment</h3>
-			<p>My keyboard is a Razer Blackwiddow X Chroma that has been through too much. To go with that I have a Logitech g502 mouse with a Hyena Agenda mouse mat.</p>
-			<p>For my monitor I have a BenQ MOBIUZ EX2510. For VR I have a normal CV1 with 2 cameras.</p>
-			<p>Headphones are very important to me, as I use them for hours at a time everyday and listen to a lot of music, so I got myself Steelseries Arctis 3 (only to be very dissapointed with the mic and build quality). I also enjoy playing some games with a controller so I have a modded Xbox One S controller.</p>
-
-			<h3>Server</h3>
-			<p>My server is a simple Zotac ZBOX-CI527.</p>
-			<p>It still has the base 8GBs of ram and i5-7200U CPU. But I upgraded it with a 120GB SSD.</p>
-			<p>And it is running a Proxmox server with many many LXC containers because why not :3</p>
-		</section>
-
 		<section id="spotify" class="justify-text">
 			<h2>Mah Music taste!</h2>
-			<p>Here are some playlists I made with some music I enjoy listening to. Though I missed many many songs.</p>
+			<p>Here I will put (most) of the music I enjoy listening too!</p>
+			<h3>Ma Spotify playlists</h3>
 			<iframe src="https://open.spotify.com/embed/playlist/5e4iqBdioVN56hz1KCYWNi?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
 			<iframe src="https://open.spotify.com/embed/playlist/37vWcad8w7GBvNIZUkDxEi?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+
+			<h3>Artists I enjoy</h3>
+			<p>Bring me the Horizon</p>
+			<p>acloudyskye</p>
+			<p>Gorillaz</p>
+			<p>Conro</p>
+			<p>Pink Floyed</p>
+			<p>Ocean Colour Scene</p>
+			<p>More coming soon!</p>
 		</section>
 	</main>
 

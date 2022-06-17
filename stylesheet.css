@@ -19,6 +19,7 @@
 
 :root {
   --bg: #151515;
+  --bg-dark: #0f0f0f;
   --bg-alt: #E8E3E3;
 
   --h: #8C977D;
@@ -122,5 +123,15 @@ span {
 
 .fluffy-colour {
 	color: #FF851B;
+  font-weight: bold;
+}
+
+.mrhdash-colour {
+	color: #a58fb6;
+  font-weight: bold;
+}
+
+.zadok-colour {
+	color: #542b00;
   font-weight: bold;
 }

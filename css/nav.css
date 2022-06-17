@@ -10,7 +10,7 @@ nav {
   display: flex; flex-direction: row;
   justify-content: space-between; align-items: center;
 
-  background-color: var(--bg-alt); color: var(--fg-dark);
+  background-color: var(--bg-dark); color: var(--fg);
 
   border-radius: var(--rad);
 
@@ -29,28 +29,29 @@ nav * {
 
   transform: rotate(-25deg) scale(3.2);
 
-  filter: drop-shadow(1px 0 0 var(--bg-alt))
-          drop-shadow(0 1px 0 var(--bg-alt))
-          drop-shadow(-1px 0 0 var(--bg-alt))
-          drop-shadow(0 -1px 0 var(--bg-alt));
+  filter: drop-shadow(1px 0 0 var(--bg-dark))
+          drop-shadow(0 1px 0 var(--bg-dark))
+          drop-shadow(-1px 0 0 var(--bg-dark))
+          drop-shadow(0 -1px 0 var(--bg-dark));
 }
 .nav-logo h2 {
   margin: 0 0 0 2rem; padding: 0;
   font-size: 28px;
   font-weight: 900;
 }
-@media (max-width:569px) {
-  .nav-logo h2 {
-    display: none;
-  }
-}
 
 .nav-links * {
   margin: 0 0.2rem; padding: 0;
 
-  color: var(--fg-dark);
+  color: var(--fg);
 
   text-align: right; text-decoration: none;
 
   font-weight: bolder;
+}
+
+@media (max-width:569px) {
+  .nav-logo h2 {
+    display: none;
+  }
 }
