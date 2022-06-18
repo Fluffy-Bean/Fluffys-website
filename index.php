@@ -34,19 +34,19 @@
 			<p>This is supposed to be a descriptive intro line, but I don't feel like writing this</p>
 		</section>
 
-		<section id="summary" class="justify-text">
+		<section id="summary" >
 			<h2>Summary</h2>
 			<p>Hi! I'm <span class="fluffy-colour">Fluffy Bean</span>. I'm a 17 year old who found himself on the internet one day and became a furry! (And a developer)</p>
 		</section>
 
-		<section id="interests" class="justify-text">
+		<section id="interests" >
 			<h2>My interests</h2>
 			<p>Appart from the obvious, I am interested in computers, specifically the programming aspect of them and the freedom it gives me to express myself</p>
 			<p>I also enjoy using Linux (Arch btw) which gives me access to do things such as customise my entire system!</p>
 			<p>Another thing I enjoy doing is playing games, some of my favourite tiles are, The Witcher 3, Minecraft, Beat Saber and Spin Rhythm XD</p>
 		</section>
 
-		<section id="experience" class="justify-text">
+		<section id="experience" >
 			<h2>Experience in programming</h2>
 			<p>I have a decently wide range of knowledge on computers and programming </p>
 			<p>Since I was young I delved into computers head first, and breaking a lot on the way. I started with Scratch, then progressed to Python in Secondary School where I really started my programming adventure!</p>
@@ -56,7 +56,7 @@
 			<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Fluffy-Bean&layout=compact">
 		</section>
 
-		<section id="pc" class="justify-text">
+		<section id="pc" >
 			<h2>System configuration</h2>
 			<h3>Operating system</h3>
 			<img src="images/sussywussy.png" alt="Screenshot of Linux desktop environment" loading="lazy">
@@ -81,7 +81,7 @@
 			<p>And it is running a Proxmox server with many many LXC containers because why not :3</p>
 		</section>
 
-		<section class="justify-text">
+		<section >
 			<h2>Special Thanks</h2>
 			<p>To <span class="jeetix-colour">Jeetix</span> for helping me with learning how to make websites and keeping the original site up and running!</p>
 			<p>And to <span class="carty-colour">Carty</span> for teaching me how to run servers and the networking required to keep sites online!</p>
@@ -132,7 +132,7 @@
 			<p>#febbec - #c859c9</p>
 		</section>
 
-		<section id="jokes" class="justify-text">
+		<section id="jokes" >
 			<h2>Funny jokes!</h2>
 			<h3>Cow joke</h3>
 			<p>What did the cow say to the other cow that took up all the space? "Mooooove over"!</p>
@@ -140,7 +140,7 @@
 			<p>Why can't electric eels get depressed? Because they're always positive!</p>
 		</section>
 
-		<section id="spotify" class="justify-text">
+		<section id="spotify" >
 			<h2>Mah Music taste!</h2>
 			<p>Here I will put (most) of the music I enjoy listening too!</p>
 			<h3>Ma Spotify playlists</h3>
@@ -150,7 +150,7 @@
 			<h3>Music flavours</h3>
 			<h4>Rock/Metal</h4>
 			<p>Bring me the Horizon</p>
-			<p>Pink Floyed</p>
+			<p>Pink Floyd</p>
 			<p>Ocean Colour Scene</p>
 			<p>Oasis</p>
 			<p>Fleetwood Mac</p>
@@ -167,6 +167,7 @@
 			<p>C148</p>
 			<p>The Rare Occasion</p>
 			<p>Joywave</p>
+			<p>Cavetown</p>
 
 			<h3>Well...</h3>
 			<p>I listen to everything, but feel free to complain to me about my choices!</p>
@@ -181,7 +182,7 @@
 		</div>
 		<div>
 			<h3>Page status</h3>
-			<p>Last updated 17 Jun 2022</p>
+			<p>Last updated 19 Jun 2022</p>
 			<p>Made and designed by <span class="fluffy-colour">Fluffy</span></p>
 		</div>
 		<div>
