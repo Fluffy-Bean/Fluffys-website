@@ -10,7 +10,27 @@ For anyone curious, no, I did not use any special software or tools to generate/
 It is all written by hand, so pleeeeease help me fix problems, thank youuu.
 
 ## ToDo
-Nothing here... yet
+
+### Gallery
+  - [ ] Make proper PHP gallery
+  - [ ] Add image Database with alt tags
+
+
+### Upload
+  - [ ] Login system
+  - [ ] Upload section
+
+### Blog
+  - [ ] Links to blogs
+  - [ ] Generating page with PHP from database
+
+### Contact section
+  - [ ] Make telegram bot with python
+  - [ ] PHP section on page with information filling out
+  - [ ] Make them somehow communicate 💀
+
+### Bruh
+  - [x] Big bruh
 
 ## Legal
 Art on the page is all items that belong to me
