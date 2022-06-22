@@ -17,19 +17,6 @@
   --orange: #FF7700;
   --orange-alt: #E0863E;
   --green: #8C977D;
-
-  /* refsheet colours */
-  --bandana-0: #FF7700;
-  --bandana-1: #FFDC00;
-  --bandana-2: #00D621;
-  --bandana-3: #0088FF;
-
-  --fur-0: #FF851B;
-  --fur-1: #FFF3BB;
-  --fur-2: #613700;
-
-  --beans: #FEBBEC;
-  --eye: #C859C9;
 }
 * {
   font-weight: 400;
@@ -41,6 +28,7 @@ html {
   background-color: #817670;
   background-image: url("images/bg-alt.png");
 
+  height: 100vh;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -98,27 +86,27 @@ a:visited {
 span {
   display: inline;
 }
+.gray-info {
+  font-style: italic;
+  opacity: 0.6;
+}
 
 .carty-colour {
 	color: #C29356;
   font-weight: bold;
 }
-
 .jeetix-colour {
 	color: cadetblue;
   font-weight: bold;
 }
-
 .fluffy-colour {
 	color: #FF851B;
   font-weight: bold;
 }
-
 .mrhdash-colour {
 	color: #a58fb6;
   font-weight: bold;
 }
-
 .zadok-colour {
 	color: #542b00;
   font-weight: bold;

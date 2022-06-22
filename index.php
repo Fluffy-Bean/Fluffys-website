@@ -10,7 +10,7 @@
 	<!-- Style -->
 	<link rel="stylesheet" href="stylesheet.css">
 	<!-- Fonts -->
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&amp;display=swap">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&amp;display=swap">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@600&amp;display=swap">
 </head>
 <body>
@@ -52,7 +52,7 @@
 			<p>Since I was young I delved into computers head first, and breaking a lot on the way. I started with Scratch, then progressed to Python in Secondary School where I really started my programming adventure!</p>
 			<p>Since then I tried many programming languages and programming-related stuff, I currently know Python, HTML and CSS but am also learning PHP and C#</p>
 			<p>I also got into Linux since the start was rough with me breaking a bunch of stuff. But since then I've been using Arch (btw) and happily configuring Rofi, Polybar, fish and even theming Discord, Spotify and Firefox!</p>
-			<p>These stats come from my GitHub profiles public repositories (private ones are not counted)</p>
+			<p><span class="gray-info">These stats come from my GitHub profiles public repositories (private ones are not counted)</span></p>
 			<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Fluffy-Bean&layout=compact">
 		</section>
 
@@ -91,7 +91,7 @@
 
 		<section id="gallery">
 			<h2>Random pictures lol</h2>
-			<img src="gallery/fluffy_VRchat-meet-2021.webp" class="gallery-image">
+			<img src="gallery/fluffy_VRchat-meet-2021.webp" class="gallery-image" alt="No alt for these images at the moment, I am very sorry">
 			<!--
 			<div class="filter-list">
 				<div>
@@ -135,9 +135,9 @@
 		<section id="jokes" >
 			<h2>Funny jokes!</h2>
 			<h3>Cow joke</h3>
-			<p>What did the cow say to the other cow that took up all the space? "Mooooove over"!</p>
+			<p>What did the cow say to the other cow that took up all the space? <span class="gray-info">"Mooooove over"!</span></p>
 			<h3>Eel joke</h3>
-			<p>Why can't electric eels get depressed? Because they're always positive!</p>
+			<p>Why can't electric eels get depressed? <span class="gray-info">Because they're always positive!</span></p>
 		</section>
 
 		<section id="spotify" >
@@ -161,13 +161,17 @@
 			<p>Conro</p>
 			<p>Pixel Terror</p>
 
-			<h4>Other</h4>
-			<p>Gorillaz</p>
+			<h4>Chill</h4>
 			<p>M38</p>
 			<p>C148</p>
 			<p>The Rare Occasion</p>
-			<p>Joywave</p>
 			<p>Cavetown</p>
+
+			<h4>Other</h4>
+			<p>Gorillaz</p>
+			<p>Joywave</p>
+			<p>Daughter</p>
+			<p>Low Roar</p>
 
 			<h3>Well...</h3>
 			<p>I listen to everything, but feel free to complain to me about my choices!</p>
@@ -182,7 +186,7 @@
 		</div>
 		<div>
 			<h3>Page status</h3>
-			<p>Last updated 19 Jun 2022</p>
+			<p>Last updated 22 Jun 2022</p>
 			<p>Made and designed by <span class="fluffy-colour">Fluffy</span></p>
 		</div>
 		<div>
