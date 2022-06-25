@@ -6,6 +6,7 @@ nav {
   width: auto;
 
   position: sticky; top: 1rem;
+  z-index: 999;
 
   display: flex; flex-direction: row;
   justify-content: space-between; align-items: center;
@@ -53,5 +54,8 @@ nav * {
 @media (max-width:569px) {
   .nav-logo h2 {
     display: none;
+  }
+  nav {
+    position: static;
   }
 }

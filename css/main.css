@@ -31,11 +31,7 @@ main section p, main section a {
 /*
   I hate CSS
 */
-#intro {
-  text-align: center;
-}
 #experience img {
-  margin: 0 auto;
   display: block;
 }
 #spotify {
@@ -77,17 +73,17 @@ main section p, main section a {
 .gallery img {
   margin: 0 0.5rem;
 
-  height: 10rem; width: 12rem;
+  height: 10rem;
+  max-width: 46%; width: auto;
 
   object-fit: cover;
 
   user-select: none;
 
-	transition: transform 0.2s cubic-bezier(.58,.01,.07,1);
+	transition: transform 0.2s cubic-bezier(0,.76,0,1);
 }
 .gallery img:hover {
-  margin: -0.25rem 0.25rem;
-  border: 0.25rem var(--green) solid;
+  outline: 0.3rem var(--green) solid;
   transform: scale(0.9);
 }
 

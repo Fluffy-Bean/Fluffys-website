@@ -29,7 +29,7 @@
   </nav>
 
 	<main>
-		<section id="intro">
+		<section id="intro" class="center">
 			<h1>Fluffy's Swagger Website</h1>
 			<p>This is supposed to be a descriptive intro line, but I don't feel like writing this</p>
 		</section>
@@ -52,8 +52,8 @@
 			<p>Since I was young I delved into computers head first, and breaking a lot on the way. I started with Scratch, then progressed to Python in Secondary School where I really started my programming adventure!</p>
 			<p>Since then I tried many programming languages and programming-related stuff, I currently know Python, HTML and CSS but am also learning PHP and C#</p>
 			<p>I also got into Linux since the start was rough with me breaking a bunch of stuff. But since then I've been using Arch (btw) and happily configuring Rofi, Polybar, fish and even theming Discord, Spotify and Firefox!</p>
-			<p><span class="gray-info">These stats come from my GitHub profiles public repositories (private ones are not counted)</span></p>
-			<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Fluffy-Bean&layout=compact">
+			<p class="gray-info center">These stats come from my GitHub profile</p>
+			<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Fluffy-Bean&layout=compact" class="center">
 		</section>
 
 		<section id="pc" >
@@ -61,7 +61,7 @@
 			<h3>Operating system</h3>
 			<img src="images/sussywussy.png" alt="Screenshot of Linux desktop environment" loading="lazy">
 			<p>My main operating system is Arch Linux, in this screenshot you can see a "rice" of Rofi and Polybar! Which you can see <a href="https://github.com/Fluffy-Bean/dots">here</a>!</p>
-			<p>My secondary system is Windows 10 Pro just for VR</p>
+			<p>My secondary system is Windows 10 just for VR</p>
 
 			<h3>Hardware</h3>
 			<p>For my PC case, I'm using an NZXT H510 (white) covered with a bunch of stickers and magnets.</p>
@@ -186,7 +186,7 @@
 		</div>
 		<div>
 			<h3>Page status</h3>
-			<p>Last updated 22 Jun 2022</p>
+			<p>Last updated 25 Jun 2022</p>
 			<p>Made and designed by <span class="fluffy-colour">Fluffy</span></p>
 		</div>
 		<div>
