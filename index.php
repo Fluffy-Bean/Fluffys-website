@@ -41,17 +41,17 @@
 
 		<section id="interests" >
 			<h2>My interests</h2>
-			<p>Appart from the obvious, I am interested in computers, specifically the programming aspect of them and the freedom it gives me to express myself</p>
-			<p>I also enjoy using Linux (Arch btw) which gives me access to do things such as customise my entire system!</p>
-			<p>Another thing I enjoy doing is playing games, some of my favourite tiles are, The Witcher 3, Minecraft, Beat Saber and Spin Rhythm XD</p>
+			<p>I am very interested in computers mainly from any era, mainly the software side of them. I always tinkered with them from a very young age, and broke many computers and laptops on the way, but that didn’t stop me! Look where I am now dad, it was worth it.</p>
+			<p>Unsurprisingly that led me to using Linux, Arch btw, which gives me access to many more cool thingys to play around with like a proper terminal with no batch crap.</p>
+			<p>I also enjoy listening to music, a lot of it, and which leads me nicely to my next part, Rhythm games!The main 2 titles I enjoy playing are Beat Saber and Spin Rhythm XD, but I also enjoy playing other games like Minecraft, The Witcher 3 and the Half Life and Portal series.</p>
 		</section>
 
 		<section id="experience" >
 			<h2>Experience in programming</h2>
-			<p>I have a decently wide range of knowledge on computers and programming </p>
-			<p>Since I was young I delved into computers head first, and breaking a lot on the way. I started with Scratch, then progressed to Python in Secondary School where I really started my programming adventure!</p>
-			<p>Since then I tried many programming languages and programming-related stuff, I currently know Python, HTML and CSS but am also learning PHP and C#</p>
-			<p>I also got into Linux since the start was rough with me breaking a bunch of stuff. But since then I've been using Arch (btw) and happily configuring Rofi, Polybar, fish and even theming Discord, Spotify and Firefox!</p>
+			<p>I have a decent understanding of PC operating systems and now also a start on networking with setting up my own server.</p>
+			<p>I delved into computers from when I was very smol and started with Scratch (not BASIC like ya’ll older folks) and then progressed to Python in Secondary School where I started to also explore other possibilities.</p>
+			<p>ince then I attempted many thingies like HTML, CSS, PHP, JavaScript, Bash, C# and other stuffs!</p>
+			<p>I got into Linux just about a year ago when writing this (29th June 22) and broke many things, but that got me into configuring a lot of software! Such as Rofi, Polybar, fish and even Discord, Spotify and Firefox!</p>
 			<p class="gray-info center">These stats come from my GitHub profile</p>
 			<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Fluffy-Bean&layout=compact" class="center">
 		</section>
@@ -166,12 +166,12 @@
 			<p>C148</p>
 			<p>The Rare Occasion</p>
 			<p>Cavetown</p>
+			<p>Daughter</p>
+			<p>Low Roar</p>
 
 			<h4>Other</h4>
 			<p>Gorillaz</p>
 			<p>Joywave</p>
-			<p>Daughter</p>
-			<p>Low Roar</p>
 
 			<h3>Well...</h3>
 			<p>I listen to everything, but feel free to complain to me about my choices!</p>
@@ -186,7 +186,7 @@
 		</div>
 		<div>
 			<h3>Page status</h3>
-			<p>Last updated 25 Jun 2022</p>
+			<p>Last updated 29 Jun 2022</p>
 			<p>Made and designed by <span class="fluffy-colour">Fluffy</span></p>
 		</div>
 		<div>

@@ -2,7 +2,7 @@
   Main
 */
 main section {
-  margin: 3rem 0; padding: 1rem;
+  margin: 5rem 0; padding: 1rem;
   width: auto;
 
   background-color: var(--bg); color: var(--fg);
@@ -25,7 +25,7 @@ main section img {
   height: auto;
 }
 main section p, main section a {
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.5rem;
 }
 
 /*
