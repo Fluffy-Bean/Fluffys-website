@@ -9,11 +9,14 @@ footer {
   display: flex; flex-direction: row; flex-wrap: wrap;
   justify-content: space-around; align-items: center;
 
-  background-color: var(--bg-dark); color: var(--fg);
+  background-color: var(--bg); color: var(--fg);
 
   border-radius: var(--rad);
 
   box-shadow: var(--shadow);
+
+  border: 0.2rem solid var(--green);
+  outline: 0.5rem solid var(--bg);
 }
 footer * {
   margin: 0; padding: 0;

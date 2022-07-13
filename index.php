@@ -41,7 +41,7 @@
 
 		<section id="interests" >
 			<h2>My interests</h2>
-			<p>I am very interested in computers mainly from any era, mainly the software side of them. I always tinkered with them from a very young age, and broke many computers and laptops on the way, but that didn’t stop me! Look where I am now dad, it was worth it.</p>
+			<p>I am very interested in computers from any era, mainly the software side of them. I always tinkered with them from a very young age, and broke many computers and laptops on the way, but that didn’t stop me! Look where I am now dad, it was worth it.</p>
 			<p>Unsurprisingly that led me to using Linux, Arch btw, which gives me access to many more cool thingys to play around with like a proper terminal with no batch crap.</p>
 			<p>I also enjoy listening to music, a lot of it, and which leads me nicely to my next part, Rhythm games!The main 2 titles I enjoy playing are Beat Saber and Spin Rhythm XD, but I also enjoy playing other games like Minecraft, The Witcher 3 and the Half Life and Portal series.</p>
 		</section>
@@ -186,7 +186,7 @@
 		</div>
 		<div>
 			<h3>Page status</h3>
-			<p>Last updated 29 Jun 2022</p>
+			<p>Last updated 13 Jul 2022</p>
 			<p>Made and designed by <span class="fluffy-colour">Fluffy</span></p>
 		</div>
 		<div>

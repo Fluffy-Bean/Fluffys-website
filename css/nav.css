@@ -11,11 +11,14 @@ nav {
   display: flex; flex-direction: row;
   justify-content: space-between; align-items: center;
 
-  background-color: var(--bg-dark); color: var(--fg);
+  background-color: var(--bg); color: var(--fg);
 
   border-radius: var(--rad);
 
   box-shadow: var(--shadow);
+
+  border: 0.2rem solid var(--green);
+  outline: 0.5rem solid var(--bg);
 }
 nav * {
   margin: 0; padding: 0;
@@ -28,7 +31,7 @@ nav * {
   margin: 0; padding: 0;
   height: 2rem; width: auto;
 
-  transform: rotate(-25deg) scale(3);
+  transform: rotate(-25deg) scale(3.5);
 
   /*filter: drop-shadow(1px 0 0 var(--bg-dark))
           drop-shadow(0 1px 0 var(--bg-dark))

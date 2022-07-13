@@ -3,16 +3,17 @@
 @import "css/footer.css";
 
 :root {
-  --bg: #151515;
-  --bg-dark: #0f0f0f;
+  --bg: #151515df;
   --bg-alt: #E8E3E3;
+  --bg-dark: #242621;
+  --bg-dark-alt: #1D1E1C;
 
   --h: #8C977D;
   --fg:#E8E3E3;
   --fg-dark: #151515;
 
   --shadow: 6px 6px 10px #15151588;
-  --rad: 15px;
+  --rad: 5px;
 
   --orange: #FF7700;
   --orange-alt: #E0863E;
@@ -25,8 +26,8 @@
 html {
   margin: 0; padding: 0;
 
-  background-color: #817670;
-  background-image: url("images/bg-4.jpg");
+  background-color: var(--bg-dark-alt);
+  background-image: url("images/bg-6.svg");
 
   height: 100vh;
   background-position: center;

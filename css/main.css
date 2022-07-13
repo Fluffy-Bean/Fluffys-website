@@ -10,6 +10,9 @@ main section {
   border-radius: var(--rad);
 
   box-shadow: var(--shadow);
+
+  border: 0.2rem solid var(--green);
+  outline: 0.5rem solid var(--bg);
 }
 main section * {
   margin: 0 0 0.5rem; padding: 0;
