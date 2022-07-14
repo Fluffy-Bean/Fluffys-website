@@ -60,8 +60,8 @@
 			<h2>System configuration</h2>
 			<h3>Operating system</h3>
 			<img src="images/sussywussy.png" alt="Screenshot of Linux desktop environment" loading="lazy">
-			<p>My main operating system is Arch Linux, in this screenshot you can see a "rice" of Rofi and Polybar! Which you can see <a href="https://github.com/Fluffy-Bean/dots">here</a>!</p>
-			<p>My secondary system is Windows 10 just for VR</p>
+			<p>My main operating system is Arch Linux, in this screenshot you can see a "rice" of Rofi and Polybar! <a href="https://github.com/Fluffy-Bean/dots">Which you can see here</a>!</p>
+			<p>My secondary operating system is Windows 10 just for VR</p>
 
 			<h3>Hardware</h3>
 			<p>For my PC case, I'm using an NZXT H510 (white) covered with a bunch of stickers and magnets.</p>
@@ -81,7 +81,16 @@
 			<p>And it is running a Proxmox server with many many LXC containers because why not :3</p>
 		</section>
 
-		<section >
+		<section id="projects">
+			<h2>Current projects</h2>
+			<p>Other than this website I also have been working on hosting these:</p>
+			<div>
+				<img src="images/Nextcloud.webp" alt="Nextcloud Logo">
+				<img src="images/Black_Candy.svg" alt="Black Candy Logo">
+			</div>
+		</section>
+
+		<section id="thanks">
 			<h2>Special Thanks</h2>
 			<p>To <span class="jeetix-colour">Jeetix</span> for helping me with learning how to make websites and keeping the original site up and running!</p>
 			<p>And to <span class="carty-colour">Carty</span> for teaching me how to run servers and the networking required to keep sites online!</p>
@@ -92,22 +101,6 @@
 		<section id="gallery">
 			<h2>Random pictures lol</h2>
 			<img src="gallery/fluffy_VRchat-meet-2021.webp" class="gallery-image" alt="No alt for these images at the moment, I am very sorry">
-			<!--
-			<div class="filter-list">
-				<div>
-					<p>Blur</p>
-				</div>
-				<div>
-					<p>Grayscale</p>
-				</div>
-				<div>
-					<p>Hue</p>
-				</div>
-				<div>
-					<p>Saturation</p>
-				</div>
-			</div>
-			-->
 			<div class="gallery" draggable="false">
 				<?php
 				$images = glob("gallery/*.{jpg,jpeg,png,webp,gif}", GLOB_BRACE);

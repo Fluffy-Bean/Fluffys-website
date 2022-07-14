@@ -32,11 +32,6 @@ nav * {
   height: 2rem; width: auto;
 
   transform: rotate(-25deg) scale(3.5);
-
-  /*filter: drop-shadow(1px 0 0 var(--bg-dark))
-          drop-shadow(0 1px 0 var(--bg-dark))
-          drop-shadow(-1px 0 0 var(--bg-dark))
-          drop-shadow(0 -1px 0 var(--bg-dark));*/
 }
 .nav-logo h2 {
   margin: 0 0 0 2rem; padding: 0;

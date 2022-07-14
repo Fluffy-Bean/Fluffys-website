@@ -1,7 +1,7 @@
 /*
   Main
 */
-main section {
+section {
   margin: 5rem 0; padding: 1rem;
   width: auto;
 
@@ -14,32 +14,45 @@ main section {
   border: 0.2rem solid var(--green);
   outline: 0.5rem solid var(--bg);
 }
-main section * {
+section * {
   margin: 0 0 0.5rem; padding: 0;
   max-width: 100%; width: auto; min-width: none;
 
   border-radius: 5px;
 }
-main section *:last-child {
+section *:last-child {
   margin-bottom: 0;
 }
-main section img {
+section img {
   margin-bottom: 0.5rem;
   height: auto;
 }
-main section p, main section a {
+section p, section a {
   margin-bottom: 0.5rem;
 }
 
 /*
-  I hate CSS
+  I suck at CSS
 */
 #experience img {
   display: block;
 }
+
 #spotify {
   display: flex;
   flex-direction: column;
+}
+
+#projects div {
+  display: flex; flex-direction: row;
+  justify-content: space-around;
+}
+#projects div img {
+  margin-right: 1rem; margin-bottom: 0;
+  height: 150px; width: 150px;
+}
+#projects div img:last-child {
+  margin: 0;
 }
 
 /*
@@ -52,7 +65,7 @@ main section p, main section a {
 
   display: block;
 
-  background-color: var(--bg-dark);
+  background-color: var(--bg-1);
 }
 
 .gallery {
@@ -95,40 +108,4 @@ main section p, main section a {
 }
 .gallery img:last-child {
   margin-right: 0;
-}
-
-/*
-  Filter
-*/
-.filter-list {
-  margin: 0 0 1rem 0; padding: 0;
-  width: 100%;
-  display: flex; flex-direction: row;
-
-  justify-content: space-between;
-}
-
-.filter-list div {
-  margin: 0 1rem 0 0; padding: 0.5rem;
-  width: 15rem; min-width: 8rem;
-  height: 1.5rem;
-
-  display: flex;
-  justify-content: center; align-items: center;
-
-  text-align: center;
-
-  background-color: var(--bg-dark);
-}
-@media (max-width:750px) {
-  .filter-list {
-    flex-direction: column;
-  }
-  .filter-list div {
-    margin: 0 0 1rem 0;
-    width: auto;
-  }
-}
-.filter-list div:last-child {
-  margin: 0;
 }
