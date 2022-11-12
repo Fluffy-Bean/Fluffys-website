@@ -23,22 +23,10 @@
 <body>
     <main>
         <nav>
-            <button onclick="openTab(event, 'Home')" class="nav-item nav-item_selected">
-                <p>Home</p>
-            </button>
-
-            <button onclick="openTab(event, 'Hobbies')" class="nav-item">
-                <p>Hobbies</p>
-            </button>
-
-            <button onclick="openTab(event, 'Experiance')" class="nav-item">
-                <p>Experiance</p>
-            </button>
-
-            <button onclick="openTab(event, 'Gallery')" class="nav-item">
-                <p>Gallery</p>
-            </button>
-
+            <button onclick="openTab(event, 'Home')" class="nav-item nav-item_selected"><p>Home</p></button>
+            <button onclick="openTab(event, 'Hobbies')" class="nav-item"><p>Hobbies</p></button>
+            <button onclick="openTab(event, 'Experiance')" class="nav-item"><p>Experiance</p></button>
+            <button onclick="openTab(event, 'Gallery')" class="nav-item"><p>Gallery</p></button>
             <span id="nav-item_underline"></span>
         </nav>
 
@@ -46,7 +34,20 @@
             <div id="Home" class="tabContent">
                 <div id="hero" class="hero">
                     <img src="img/sad.png">
-                    <h1>O, hi stranger</h1>
+
+                    <?php
+                        $welcome = array(
+                            'O, hi Mark',
+                            'O, hi stranger',
+                            'Hewwo',
+                            'AAAAAAA',
+                            'UwU',
+                            'HELLOOOOOO'
+                        );
+
+                        echo "<h1>".$welcome[array_rand($welcome)]."</h1>";
+                    ?>
+
                     <p>I'm a smelly Maned Wolf that goes by Fluffy Bean. I'm 17 years old that has weird interests</p>
                 </div>
 
