@@ -84,7 +84,7 @@ nav {
 }
 
 .nav-item_selected {
-  background-color: #121212;
+  background-color: #101010;
 }
 
 #nav-item_underline {
@@ -130,12 +130,14 @@ nav {
 }
 .hero h1 {
   margin: 0;
-  padding: 0;
+  padding: 0 0 0 0.5rem;
   font-family: "Mona-Sans", sans-serif;
   font-size: 2.5rem;
   font-weight: 800;
   font-stretch: ultra-expanded;
+  line-height: 1;
   color: #e8e5e5;
+  border-left: 1.5rem solid #8c977d;
   transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
   z-index: 2;
 }
@@ -176,7 +178,9 @@ nav {
   pointer-events: all;
 }
 .hero_scrolled h1 {
+  padding: 0;
   font-size: 1.5rem;
+  border-left: 0rem #121212 solid;
 }
 .hero_scrolled p {
   display: none;
@@ -224,7 +228,7 @@ body {
   margin: 0;
   padding: 0.5rem;
   height: 100%;
-  background-image: url("../leaves.jpg");
+  background-image: url("../bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -354,17 +358,15 @@ main {
   font-family: "Hubot-Sans", sans-serif;
   font-size: 1rem;
   font-weight: 600;
-  color: #8c977d;
-  -webkit-text-decoration: underline 0.1rem #151515;
-          text-decoration: underline 0.1rem #151515;
-  transition: -webkit-text-decoration 0.2s ease-in-out;
-  transition: text-decoration 0.2s ease-in-out;
-  transition: text-decoration 0.2s ease-in-out, -webkit-text-decoration 0.2s ease-in-out;
-}
-.content a:hover {
   color: #e8e5e5;
   -webkit-text-decoration: underline 0.3rem #8c977d;
           text-decoration: underline 0.3rem #8c977d;
+  transition: all 0.15s ease-in-out;
+}
+.content a:hover {
+  color: #8c977d;
+  -webkit-text-decoration: underline 0.1px #151515;
+          text-decoration: underline 0.1px #151515;
 }
 .content img {
   margin: 0 auto;

@@ -59,17 +59,21 @@
                         <p>Twitter</p>
                         <i class="ph-twitter-logo c_red"></i>
                     </button>
+                    <button class="btn_large" id="mastodon_btn">
+                        <p>Mastodon</p>
+                        <i class="ph-linux-logo c_yellow"></i>
+                    </button>
                     <button class="btn_large" id="telegram_btn">
                         <p>Telegram</p>
-                        <i class="ph-telegram-logo c_purple"></i>
+                        <i class="ph-telegram-logo c_green"></i>
                     </button>
                     <button class="btn_large" id="github_btn">
                         <p>Github</p>
-                        <i class="ph-github-logo c_yellow"></i>
+                        <i class="ph-github-logo c_blue"></i>
                     </button>
                     <button class="btn_large" id="discord_btn">
                         <p>Discord</p>
-                        <i class="ph-discord-logo c_green"></i>
+                        <i class="ph-discord-logo c_purple"></i>
                     </button>
 
                     <br>
@@ -212,7 +216,7 @@
 
         <footer>
             <p>Made by <span class="c_orange">Fluffy</span></p>
-            <p>Updated at <span class="c_red">12 Nov</span></p>
+            <p>Updated at <span class="c_red">16 Nov</span></p>
         </footer>
 
         <script src="app.js"></script>
