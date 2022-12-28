@@ -1,0 +1,37 @@
+.wrapper {
+    margin: 0;
+    padding: 0;
+
+    background-color: $white;
+    color: $black;
+
+    border-radius: 6px 0 0 0;
+
+    overflow: hidden;
+}
+
+.content {
+    margin: 0;
+    padding: 0.5rem;
+
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    position: relative;
+
+    p, .btn {
+        margin: 0;
+        padding: 0;
+
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .wrapper {
+        border-radius: 0;
+    }
+}

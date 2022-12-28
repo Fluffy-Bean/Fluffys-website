@@ -1,0 +1,35 @@
+body {
+    min-height: 100vh;
+
+    display: grid;
+    grid-template-areas: 'aside nav'
+                        'aside wrapper'
+                        'footer wrapper';
+
+    grid-template-rows: 3rem auto 3rem;
+    grid-template-columns: 20rem 1fr;
+}
+
+.nav {
+    grid-area: nav;
+}
+.wrapper {
+    grid-area: wrapper;
+}
+.aside {
+    grid-area: aside;
+}
+.footer {
+    grid-area: footer;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        grid-template-areas: 'nav'
+                            'wrapper'
+                            'footer';
+
+        grid-template-rows: 3rem 1fr 3rem;
+        grid-template-columns: 1fr;
+    }
+}

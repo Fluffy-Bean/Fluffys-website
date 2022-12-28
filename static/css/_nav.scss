@@ -1,0 +1,56 @@
+.nav {
+    margin: 0;
+    padding: 0;
+
+    background-color: $black;
+    color: $white;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    position: relative;
+
+    z-index: 69;
+
+    p {
+        margin: 0 1rem;
+        padding: 0;
+
+        font-size: 1rem;
+    }
+}
+.nav-toggle {
+    margin: 0;
+    padding: 0.5rem 1rem;
+
+    display: none;
+
+    background-color: transparent;
+    color: $white;
+
+    border: none;
+
+    i {
+        font-size: 1.5rem;
+
+        display: inline-block;
+
+        // display the hamburger icon vertically centered
+        line-height: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav {
+        justify-content: space-between;
+
+        background-color: #121212;
+    }
+    .nav-toggle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
