@@ -7,6 +7,10 @@ uploads/
 # remove all VSCode files
 .vscode
 
+# remove all CSS files
+static/css/style.css
+static/css/style.css.map
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
