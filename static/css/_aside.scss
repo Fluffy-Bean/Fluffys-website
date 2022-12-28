@@ -11,12 +11,13 @@
     background-color: $black;
 
     box-sizing: border-box;
+    z-index: 68;
 
     hr {
-        margin: 0.5rem 0;
+        margin: 0.5rem auto;
         padding: 0;
 
-        width: 100%;
+        width: 80%;
         height: 1px;
 
         background-color: $white;
@@ -92,7 +93,13 @@
     @include aside-item($purple);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: $phone-width) {
+    @media screen and (min-width: calc(#{$phone-width} * 0.6)) {
+        .aside {
+            max-width: 20rem;
+        }
+    }
+
     .aside {
         display: block;
 
@@ -100,15 +107,20 @@
         top: 3rem;
         left: -100vw;
 
-        width: calc(100vw - 1rem);
+        width: 100vw;
         height: calc(100vh - 3rem);
 
-        z-index: 68;
+        background-color: #121212;
+
         overflow-y: auto;
-
         box-shadow: 0 0 0.5rem 5px rgba($black, 0.5);
-
         transition: left 0.2s ease-in-out, opacity 0.2s ease-in-out;
+
+        hr {
+            margin: 1rem auto;
+
+            width: 100%;
+        }
     }
 
     .aside-active {

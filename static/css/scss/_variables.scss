@@ -8,7 +8,7 @@ $blue: #8DA3B9;
 //$dblue: #222c45;
 $purple: #A988B0;
 
-$primary: $green;
+$primary: #f5622d;
 
 @font-face {
     font-family: 'Mona-Sans';
@@ -27,6 +27,8 @@ $primary: $green;
 
 $font-header: "Mona-Sans", sans-serif;
 $font-body: "Hubot-Sans", sans-serif;
+
+$phone-width: 900px;
 
 @function hexToRGB($hex) {
     @return red($hex), green($hex), blue($hex);

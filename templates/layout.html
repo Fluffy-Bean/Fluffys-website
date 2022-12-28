@@ -24,12 +24,12 @@
                 Home
                 <i class="ph-arrow-right"></i>
             </a>
-            <a href="/#contact" class="aside-item">
-                Social Media
-                <i class="ph-arrow-right"></i>
+            <a href="/thankies" class="aside-item">
+                Thankies
+                <i class="ph-heart"></i>
             </a>
-            <a href="/#about" class="aside-item">
-                About
+            <a href="/funny" class="aside-item">
+                lol
                 <i class="ph-arrow-right"></i>
             </a>
 
@@ -42,17 +42,6 @@
             <a href="/status" class="aside-item">
                 Server Status
                 <i class="ph-cpu"></i>
-            </a>
-            <a href="/" class="aside-item">
-                Gwa Gwa
-                <i class="ph-package"></i>
-            </a>
-
-            <hr>
-
-            <a href="/funny" class="aside-item">
-                lol
-                <i class="ph-arrow-right"></i>
             </a>
         </div>
     </div>
@@ -67,19 +56,8 @@
 
     <script>
         let btnColours = [ 'red', 'yellow', 'green', 'blue', 'purple']
-        let btnElements = document.querySelectorAll('.btn');
         let asideElements = document.querySelectorAll('.aside-item');
 
-        for (let i = 0; i < btnElements.length; i++) {
-            btnElements[i].addEventListener("mouseover", function() {
-                let randomColour = Math.floor(Math.random() * btnColours.length);
-                this.style.color = `var(--${btnColours[randomColour]})`;
-            });
-        
-            btnElements[i].addEventListener("mouseout", function() {
-                this.style.color = '';
-            });
-        }
         for (let i = 0; i < asideElements.length; i++) {
             asideElements[i].addEventListener("mouseover", function() {
                 let randomColour = Math.floor(Math.random() * btnColours.length);

@@ -42,11 +42,22 @@
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: $phone-width) {
     .nav {
+        margin: 0;
+        padding: 0;
+
+        width: 100vw;
+        height: 3rem;
+
+        position: fixed;
+        top: 0;
+        left: 0;
+
         justify-content: space-between;
 
-        background-color: #121212;
+        background-color: $black;
+        color: $white;
     }
     .nav-toggle {
         display: flex;

@@ -23,13 +23,12 @@ body {
     grid-area: footer;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: $phone-width) {
     body {
-        grid-template-areas: 'nav'
-                            'wrapper'
+        grid-template-areas: 'wrapper'
                             'footer';
 
-        grid-template-rows: 3rem 1fr 3rem;
+        grid-template-rows: 1fr 3rem;
         grid-template-columns: 1fr;
     }
 }

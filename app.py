@@ -50,12 +50,20 @@ def internal_server_error(e):
 #
 @app.route('/')
 def index():
-    return render_template('index.html')
+    msg = ['Some interesting text', 'Balls', 'hiiiiii']
+    return render_template('index.html', title=random.choice(msg))
 
+@app.route('/thankies')
+def thankies():
+    return render_template('thankies.html')
 
 @app.route('/funny')
 def funny():
     return render_template('funny.html')
+
+@app.route('/status')
+def status():
+    abort(403)
 
 @app.route('/error/<error>/<msg>')
 def error(error, msg):
