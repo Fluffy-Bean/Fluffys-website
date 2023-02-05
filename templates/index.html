@@ -14,4 +14,15 @@
         <a href="https://github.com/Fluffy-Bean" class="btn" data-value="Github">Github</a>
         <button class="btn" data-value="Discord" id="discord">Discord</button>
     </div>
+
+    <script>
+        document.getElementById("discord").onclick = function() {
+            try {
+                navigator.clipboard.writeText("Fluffy Bean#5212");
+                addToast("Copied to clipboard");
+            } catch (err) {
+                addToast("Error copying to clipboard, are you on HTTP?");
+            }
+        }
+    </script>
 {% endblock %}
