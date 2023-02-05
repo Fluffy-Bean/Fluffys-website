@@ -2,8 +2,12 @@ from flask import Flask, render_template, redirect
 from flask_compress import Compress
 
 import requests
+import dotenv
 from random import choice
 import json
+
+
+LASTFM_API_KEY = dotenv.get_key('./.env', 'LASTFM')
 
 
 app = Flask(__name__)
@@ -46,7 +50,7 @@ def about():
 @app.route('/music')
 def music():
     current_tracks = requests.get(
-        'http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=Fluffy_Bean_&api_key=a6793a0176141e5cf7767c4cec1bda6f&limit=5&format=json')
+        f'http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=Fluffy_Bean_&api_key={LASTFM_API_KEY}&limit=5&format=json')
     current_tracks = json.loads(current_tracks.text)
     
     tracks = []
