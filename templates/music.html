@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+{% block nav_music %}selected{% endblock %}
+
+{% block content %}
+    <h1 data-value="Enslaved-Sound">Enslaved-Sound</h1>
+
+    {% for track in tracks %}
+        <div class="music">
+            <span class="music-image"><img src="{{track.image}}" style="opacity:0" onload="fadeOnLoad(this)"></span>
+            <div class="music-info">
+                {% if track.nowPlaying %}
+                    <p class="music-nowplaying">Now Playing:</p>
+                    <a href={{track.url}}>{{track.name}}</a>
+                    <p>by {{track.artist}}</p>
+                {% else %}
+                    <a href={{track.url}}>{{track.name}}</a>
+                    <p>by {{track.artist}}</p>
+                    <p>on {{track.album}}</p>
+                {% endif %}
+            </div>
+        </div>
+    {% endfor %}
+
+    <div class="content">
+        <p>Provided by <a href="http://www.last.fm">Last.fm</a></p>
+    </div>
+{% endblock %}

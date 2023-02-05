@@ -1,33 +1,17 @@
 {% extends 'layout.html' %}
+{% block nav_home %}selected{% endblock %}
+
 {% block content %}
-    <div class="content content-header">
-        <p>{{title}}</p>
+    <div class="content">
+        <h1 data-value="Social-Media">Social-Media</h1>
+        <p class="subtitle" data-value="{{msg}}">{{msg}}</p>
     </div>
 
-    <div class="content content-list" id="contact">
-        <button class="btn btn-blue">
-            Twitter
-            <i class="ph-twitter-logo"></i>
-        </button>
-        <button class="btn btn-purple">
-            Mastodon
-            <i class="ph-linux-logo"></i>
-        </button>
-        <button class="btn btn-blue">
-            Telegram
-            <i class="ph-telegram-logo"></i>
-        </button>
-        <button class="btn btn-yellow">
-            Github
-            <i class="ph-github-logo"></i>
-        </button>
-        <button class="btn btn-red">
-            Discord
-            <i class="ph-discord-logo"></i>
-        </button>
-    </div>
-
-    <div class="content content-img" id="contact">
-        <img src="{{ url_for('static', filename='images/sneak.png') }}" alt="Fluffy the maned wolf art, line art by Shep, colouring by meeee" style="max-width: 500px;">
+    <div class="content">
+        <a href="https://twitter.com/fluffybeanUwU" class="btn" data-value="Twitter">Twitter</a>
+        <a href="https://meow.social/@Fluffy_Bean" class="btn" data-value="Mastodon">Mastodon</a>
+        <a href="https://t.me/Fluffy_Bean" class="btn" data-value="Telegram">Telegram</a>
+        <a href="https://github.com/Fluffy-Bean" class="btn" data-value="Github">Github</a>
+        <button class="btn" data-value="Discord" id="discord">Discord</button>
     </div>
 {% endblock %}

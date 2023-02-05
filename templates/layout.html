@@ -4,81 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leggy land</title>
-    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" defer>
-    <script 
-        src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-        crossorigin="anonymous">
+    <meta name="description" content="Fluffy Bean's amazing website">
+    <link rel="icon" href="{{url_for('static', filename='images/taidum.png')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <script src="{{ url_for('static', filename='js/main.js') }}" defer></script>
+    <script>
+        function fadeOnLoad(obj) {
+            obj.style.transition = "opacity 1s";
+            obj.style.opacity = 1;
+        }
     </script>
-    <script src="https://unpkg.com/phosphor-icons" defer></script>
 </head>
 <body>
-    <div class="nav">
-        <button class="nav-toggle"><i class="ph-list"></i></button>
-        <p>Leggy land</p>
-    </div>
+    <nav>
+        <a class="{% block nav_home %}{% endblock %}" href="/">Home</a>
+        <a class="{% block nav_cretura %}{% endblock %}" href="/cretura">Cretura</a>
+        <a class="{% block nav_about %}{% endblock %}" href="/about">About</a>
+        <span class="spacer"></span>
+        <a class="{% block nav_music %}{% endblock %}" href="/music">Music</a>
+    </nav>
 
-    <div class="aside">
-        <div class="aside-container">
-            <a href="/#" class="aside-item">
-                Home
-                <i class="ph-arrow-right"></i>
-            </a>
-            <a href="/thankies" class="aside-item">
-                Thankies
-                <i class="ph-heart"></i>
-            </a>
-            <a href="/funny" class="aside-item">
-                lol
-                <i class="ph-arrow-right"></i>
-            </a>
-
-            <hr>
-
-            <a href="/" class="aside-item">
-                Gallery
-                <i class="ph-image"></i>
-            </a>
-            <a href="/status" class="aside-item">
-                Server Status
-                <i class="ph-cpu"></i>
-            </a>
-        </div>
-    </div>
-    
     <div class="wrapper">
         {% block content %} {% endblock %}
     </div>
 
-    <div class="footer">
-        <p>Last updated 27th Dec</p>
-    </div>
-
-    <script>
-        let btnColours = [ 'red', 'yellow', 'green', 'blue', 'purple']
-        let asideElements = document.querySelectorAll('.aside-item');
-
-        for (let i = 0; i < asideElements.length; i++) {
-            asideElements[i].addEventListener("mouseover", function() {
-                let randomColour = Math.floor(Math.random() * btnColours.length);
-                this.classList.add(`aside-${btnColours[randomColour]}`);
-            });
-        
-            asideElements[i].addEventListener("mouseout", function() {
-                this.classList = 'aside-item';
-            });
-        }
-
-        let navToggle = document.querySelector('.nav-toggle');
-        let aside = document.querySelector('.aside');
-
-        navToggle.addEventListener('click', function() {
-            aside.classList.toggle('aside-active');
-        });
-
-        function fadeOnLoad(obj) {
-            $(obj).fadeIn(621);
-        }
-    </script>
+    <div class="toast-container"></div>
 </body>
 </html>

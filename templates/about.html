@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+{% block nav_about %}selected{% endblock %}
+
+{% block content %}
+    <div class="content">
+        <h1 data-value="About-Me">About-Me</h1>
+    </div>
+
+    <div class="content">
+        <h2 data-value="Meeee :3">Meeee :3</h2>
+        <p>Hewwo, I'm a 17 year old nerd, who likes to code and tinker with computers!</p>
+        <p>I'm mostly a frontend developer, with some knowlage of the backend. I also enjoy programming for the hell of it</p>
+    </div>
+
+    <div class="content">
+        <h2 data-value="Fluffy-Bean">Fluffy-Bean</h2>
+        <p>Fluffy Bean is a maned wolf, he reflects my personality and is my fursona</p>
+        <p>Refsheet made by mrHDash</p>
+    </div>
+    
+    <img src="{{ url_for('static', filename='images/ref.png') }}" alt="Orange maned wolf sneaking under a yellow sheet" style="opacity:0" onload="fadeOnLoad(this)">
+    
+    <div class="content">
+        <h2 data-value="Experiance">Experiance</h2>
+        <p>
+            I'm quite well experianced with Python, HTML, CSS/Sass, and Shell Scripting.
+            And have some experiance with JavaScript, PHP, MySQL and a few other languages
+        </p>
+        <p>My main operating system has been Linux for about 1.5 years (Arch btw)</p>
+        <p>Now I have started to learn hardware and been messing around with Pi Picos!</p>
+    </div>
+
+    <div class="content">
+        <h2 data-value="Projects">Projects</h2>
+        <p>Recently I have started working on a gallery, originally written in PHP for my own use before making it public</p>
+        <p>
+            It is now written in Python with Flask and is open source! You can find it on <a href="https://github.com/Fluffy-Bean/onlylegs">GitHub</a>.
+            Or on my self hosted instance of <a href="https://git.leggy.dev/Fluffy/onlylegs">Gitea</a>!
+        </p>
+    </div>
+{% endblock %}

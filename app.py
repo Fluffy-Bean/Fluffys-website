@@ -1,10 +1,78 @@
-from flask import Flask, render_template, send_from_directory, abort, url_for, jsonify, redirect, request, session
-from werkzeug.utils import secure_filename
-import os
-import random
+from flask import Flask, render_template, redirect
+from flask_compress import Compress
+
+import requests
+from random import choice
+import json
 
 
 app = Flask(__name__)
+Compress(app)
+
+
+#
+#   ROUTES
+#
+@app.route('/')
+def index():
+    msg = ['This is a test string',
+           'This could go one of two ways...',
+           'Gwa Gwa', 'It\'s a UNIX system! I know this!',
+           'They turned him into a pickle, its the funnies shit I\'ve ever seen',
+           '*internal screaming*',
+           'Don\'t forget to drink water!',
+           'Fluffy made this!',
+           'I wish we were better strangers.',
+           'If I were you, I\'d run now',
+           'SILICA GEL "DO NOT EAT".',
+           'AAAAAAAAAAAAAAAAAAAA',
+           'The weather is dry',
+           'Gods die too.',
+           'Eat hotchip and lie']
+    
+    return render_template('index.html', msg=choice(msg))
+
+
+@app.route('/cretura')
+def cretura():
+    return render_template('cretura.html')
+
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+
+@app.route('/music')
+def music():
+    current_tracks = requests.get(
+        'http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=Fluffy_Bean_&api_key=a6793a0176141e5cf7767c4cec1bda6f&limit=5&format=json')
+    current_tracks = json.loads(current_tracks.text)
+    
+    tracks = []
+    
+    for track in current_tracks['recenttracks']['track']:
+        nowPlaying = False
+        if '@attr' in track:
+            nowPlaying = True
+            
+        tmp_track = {
+            'name': track['name'],
+            'artist': track['artist']['#text'],
+            'album': track['album']['#text'],
+            'url': track['url'],
+            'image': track['image'][2]['#text'],
+            'nowPlaying': nowPlaying,
+        }
+        
+        tracks.append(tmp_track)
+    
+    return render_template('music.html', tracks=tracks)
+
+
+@app.route('/blog')
+def blog():
+    return render_template('blog.html')
 
 
 #
@@ -43,49 +111,3 @@ def internal_server_error(e):
     error = '500'
     msg = 'Server died inside :c'
     return render_template('error.html', error=error, msg=msg), 500
-
-
-#
-#   ROUTES
-#
-@app.route('/')
-def index():
-    msg = ['Some interesting text', 'Balls', 'hiiiiii']
-    return render_template('index.html', title=random.choice(msg))
-
-@app.route('/thankies')
-def thankies():
-    return render_template('thankies.html')
-
-@app.route('/funny')
-def funny():
-    return render_template('funny.html')
-
-@app.route('/status')
-def status():
-    abort(403)
-
-@app.route('/error/<error>/<msg>')
-def error(error, msg):
-    try:
-        error = str(error)
-    except:
-        abort(405)
-    
-    try:
-        msg = str(msg)
-    except:
-        abort(405)
-    
-    return render_template('error.html', error=error, msg=msg)
-
-
-#
-#   METHODS
-#
-@app.route('/fileList/<item_type>', methods=['GET'])
-def image_list(item_type):
-    if request.method != 'GET':
-        abort(405)
-
-    #return jsonify(item_list)

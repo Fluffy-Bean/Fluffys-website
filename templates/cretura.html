@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+{% block nav_cretura %}selected{% endblock %}
+
+{% block content %}
+    <h1 data-value="Cretura">Cretura</h1>
+    <p class="subtitle" data-value="Thanks to these critters!">Thanks to these critters!</p>
+
+    <div class="content" id="about">
+        <p>Jeetix: Helping me with learning how to make websites!</p>
+        <p>Carty: Teaching me how to run servers and the networking!</p>
+        <p>mrHDash: For the Ref Sheet, also my smelly brother</p>
+        <p>Zadok: Silly taidum art on the icon of this page!</p>
+        <!--
+        <p>
+            Shep: Provided free YCH, 
+            <a href="https://twitter.com/ShepGoesBlep/status/1563946805062148102?s=20&t=0wVGqoYa74AsjSSnkZbzjA">you can find it here</a>
+        </p>
+        <img src="{{ url_for('static', filename='images/sneak.png') }}" alt="Orange maned wolf sneaking under a yellow sheet" height="200px" style="opacity:0" onload="fadeOnLoad(this)">
+        -->
+    </div>
+
+    <img src="{{url_for('static', filename='images/ny.png')}}" style="opacity:0" onload="fadeOnLoad(this)">
+{% endblock %}
