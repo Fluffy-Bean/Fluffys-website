@@ -1,11 +1,14 @@
-from flask import Flask, render_template, redirect
+from flask import Flask, render_template, request, jsonify
 from flask_compress import Compress
 
-import requests
 import dotenv
+
 from random import choice
 import json
+import requests
 
+# Getting color palette from album art
+import colorthief
 
 LASTFM_API_KEY = dotenv.get_key('./.env', 'LASTFM')
 
@@ -19,18 +22,15 @@ Compress(app)
 #
 @app.route('/')
 def index():
-    msg = ['This is a test string',
+    msg = ['Don\'t cry because it\'s over, smile because it happened',
            'This could go one of two ways...',
-           'Gwa Gwa', 'It\'s a UNIX system! I know this!',
-           'They turned him into a pickle, its the funnies shit I\'ve ever seen',
+           'Gwa Gwa',
+           'It\'s a UNIX system! I know this!',
            '*internal screaming*',
            'Don\'t forget to drink water!',
-           'Fluffy made this!',
            'I wish we were better strangers.',
            'If I were you, I\'d run now',
            'SILICA GEL "DO NOT EAT".',
-           'AAAAAAAAAAAAAAAAAAAA',
-           'The weather is dry',
            'Gods die too.',
            'Eat hotchip and lie']
     
@@ -47,37 +47,42 @@ def about():
     return render_template('about.html')
 
 
-@app.route('/music')
+@app.route('/music', methods=['GET', 'POST'])
 def music():
-    current_tracks = requests.get(
+    if request.method == 'POST':
+        current_tracks = requests.get(
         f'http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=Fluffy_Bean_&api_key={LASTFM_API_KEY}&limit=5&format=json')
-    current_tracks = json.loads(current_tracks.text)
-    
-    tracks = []
-    
-    for track in current_tracks['recenttracks']['track']:
-        nowPlaying = False
-        if '@attr' in track:
-            nowPlaying = True
-            
-        tmp_track = {
-            'name': track['name'],
-            'artist': track['artist']['#text'],
-            'album': track['album']['#text'],
-            'url': track['url'],
-            'image': track['image'][2]['#text'],
-            'nowPlaying': nowPlaying,
-        }
+        current_tracks = json.loads(current_tracks.text)
         
-        tracks.append(tmp_track)
+        tracks = []
+        
+        for track in current_tracks['recenttracks']['track']:
+            # As django is weird with @attr in json data
+            # I make a new dict with a bool for nowPlaying
+            nowPlaying = False
+            if '@attr' in track:
+                nowPlaying = True
+                
+            # Yoink color palette from album art
+            color_thief = colorthief.ColorThief(requests.get(track['image'][2]['#text'], stream=True).raw)
+            palette = color_thief.get_palette()
+                
+            tmp_track = {
+                'name': track['name'],
+                'artist': track['artist']['#text'],
+                'album': track['album']['#text'],
+                'url': track['url'],
+                'image': track['image'][2]['#text'],
+                'nowPlaying': nowPlaying,
+                'palette': palette[0]
+            }
+            
+            tracks.append(tmp_track)
+            
+        return jsonify(tracks)
     
-    return render_template('music.html', tracks=tracks)
-
-
-@app.route('/blog')
-def blog():
-    return render_template('blog.html')
-
+    # GET request
+    return render_template('music.html')
 
 #
 #   ERROR HANDLERS
