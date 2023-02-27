@@ -26,24 +26,79 @@
     </div>
 
     <div class="content">
-        <h2 data-value="Languages">Languages</h2>
-        <p class="sub_experiance python good">Python <span>Good</span></p>
-        <p class="sub_experiance html vgood">HTML <span>Very Good</span></p>
-        <p class="sub_experiance css vgood">CSS <span>Very Good</span></p>
-        <p class="sub_experiance sass vgood">Sass/SCSS <span>Very Good</span></p>
-        <p class="sub_experiance js bad">JavaScript <span>Meh</span></p>
-        <p class="sub_experiance php good">PHP <span>Good</span></p>
-        <p class="sub_experiance sql ok">SQL <span>Ok</span></p>
-        <p class="sub_experiance shell ok">Shell Scripting <span>Ok</span></p>
-        <p class="sub_experiance rust vbad">Rust <span>Learning</span></p>
+        <h2 data-value="Level of knowlage">Level of knowlage</h2>
+        <p>My levels of knowlage are based on a scale of 0-5, with 0 being very little experiance and 5 being best in the world, obviously ;3</p>
+
+        <span class="bar-chart">
+            <h3 data-value="Languages">Languages</h3>
+            {% for lang in languages %}
+                <span class="sub_experiance"
+                    data-value="{{ languages[lang].level }}"
+                    style="background-color: {{ languages[lang].color }};">
+                    <span class="fg"><span>{{ lang }} - Since {{ languages[lang].since }}</span></span>
+                    <span class="bg">{{ lang }} - Since {{ languages[lang].since }}</span>
+                </span>
+            {% endfor %}
+
+            <h3 data-value="OS'">OS'</h3>
+            {% for os in systems %}
+                <span class="sub_experiance"
+                    data-value="{{ systems[os].level }}"
+                    style="background-color: {{ systems[os].color }};">
+                    <span class="fg"><span>{{ os }} - Since {{ systems[os].since }}</span></span>
+                    <span class="bg">{{ os }} - Since {{ systems[os].since }}</span>
+                </span>
+            {% endfor %}
+
+            <span class="marker" data-value="0"></span>
+            <span class="marker" data-value="1"></span>
+            <span class="marker" data-value="2"></span>
+            <span class="marker" data-value="3"></span>
+            <span class="marker" data-value="4"></span>
+        </span>
     </div>
 
-    <div class="content">
-        <h2 data-value="OS'">OS'</h2>
-        <p class="sub_experiance ubuntu good">Ubuntu <span>Good</span></p>
-        <p class="sub_experiance arch vgood">Arch <span>Very Good</span></p>
-        <p class="sub_experiance proxmox ok">Proxmox <span>Decent</span></p>
-        <p class="sub_experiance manjaro bad">Manjaro <span>Breaking bad</span></p>
-        <p class="sub_experiance windows ok">Windows <span>Ok</span></p>
-    </div>
+    <script>
+        var bars = document.querySelectorAll(".sub_experiance");
+    
+        bars.forEach(bar => {
+            var value = bar.getAttribute("data-value");
+            
+            // 0 - 5
+            if (value == 0) {
+                bar.style.width = "20%";
+            } else if (value == 1) {
+                bar.style.width = "40%";
+            } else if (value == 2) {
+                bar.style.width = "60%";
+            } else if (value == 3) {
+                bar.style.width = "80%";
+            } else if (value == 4) {
+                bar.style.width = "100%";
+            } else if (value == 5) {
+                bar.style.width = "621%";
+            }
+        });
+
+        var markers = document.querySelectorAll(".marker");
+    
+        markers.forEach(bar => {
+            var value = bar.getAttribute("data-value");
+            
+            // 0 - 5
+            if (value == 0) {
+                bar.style.left = "20%";
+            } else if (value == 1) {
+                bar.style.left = "40%";
+            } else if (value == 2) {
+                bar.style.left = "60%";
+            } else if (value == 3) {
+                bar.style.left = "80%";
+            } else if (value == 4) {
+                bar.style.left = "100%";
+            } else if (value == 5) {
+                bar.style.left = "621%";
+            }
+        });
+    </script>
 {% endblock %}
