@@ -193,15 +193,15 @@ main {
     font-size: 1rem;
     font-weight: 600;
 
-    color: $green;
+    color: $white;
 
-    text-decoration: underline 0.1rem $black;
+    text-decoration: underline 0.3rem $green;
   
-    transition: text-decoration 0.2s ease-in-out;
+    transition: all 0.15s ease-in-out;
 
     &:hover {
-      color: $white;
-      text-decoration: underline 0.3rem $green;
+      color: $green;
+      text-decoration: underline 0.1px $black;
     }
   }
 
@@ -286,7 +286,7 @@ main {
   }
 
   &:hover {
-    background-color: $black;
+    background-color: $black-est;
     color: $green;
     border-left: 0.9rem solid $green;
 
