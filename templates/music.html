@@ -1,0 +1,103 @@
+{% extends 'layout.html' %}
+{% block nav_music %}selected{% endblock %}
+
+{% block content %}
+    <h1 data-value="Muuuuuuusic">Muuuuuuusic</h1>
+
+    <div class="music">
+        <span class="loader"></span>
+    </div>
+
+    <div class="content">
+        <p>Provided by <a href="http://www.last.fm">Last.fm</a></p>
+    </div>
+
+    <script>
+        function processMusic(data) {
+            const music = document.querySelector('.music');
+            music.innerHTML = '';
+            
+            data = JSON.parse(data);
+
+            Object.entries(data).forEach(([key, value]) => {
+                // Create track container
+                const track = document.createElement('div');
+                track.classList.add('track');
+
+                // Create track image container
+                const trackImage = document.createElement('span');
+                trackImage.classList.add('track-image');
+                // UUUUUUUUUGHHHHHHHHHH
+                trackImage.style.backgroundColor = `rgb(${value.palette[0]}, ${value.palette[1]}, ${value.palette[2]})`;
+                // Create track image
+                const trackImageImg = document.createElement('img');
+                trackImageImg.src = value.image;
+                trackImage.appendChild(trackImageImg);
+
+
+                // Create track info container
+                const trackInfo = document.createElement('div');
+                trackInfo.classList.add('track-info');
+
+                // Create track title
+                const trackTitle = document.createElement('a');
+                trackTitle.href = value.url;
+                trackTitle.innerHTML = value.name;
+
+                // Create track artist
+                const trackArtist = document.createElement('p');
+                trackArtist.innerHTML = 'by ' + value.artist;
+
+                // If track is now playing, add now playing text
+                // Else add album name
+                if (value.nowPlaying) {
+                    const trackNowPlaying = document.createElement('p');
+                    trackNowPlaying.classList.add('track-nowplaying');
+                    trackNowPlaying.innerHTML = 'Now Playing:';
+
+                    // Append now playing and track info to track info
+                    trackInfo.appendChild(trackNowPlaying);
+                    trackInfo.appendChild(trackTitle);
+                    trackInfo.appendChild(trackArtist);
+                } else {
+                    const trackAlbum = document.createElement('p');
+                    trackAlbum.innerHTML = 'on ' + value.album;
+
+                    // Append track title, artist and album to track info
+                    trackInfo.appendChild(trackTitle);
+                    trackInfo.appendChild(trackArtist);
+                    trackInfo.appendChild(trackAlbum);
+                }
+
+                // Append track image and track info to track
+                track.appendChild(trackImage);
+                track.appendChild(trackInfo);
+
+                // Append track to music
+                music.appendChild(track);
+            });
+        }
+
+        // Make POST request with XHR
+        let xhr = new XMLHttpRequest();
+        xhr.open('POST', '/music', true);
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.send(JSON.stringify({}));
+
+        // Handle response
+        xhr.onloadend = function () {
+            if (xhr.readyState == XMLHttpRequest.DONE) {
+                // check if no error occurred
+                if (xhr.status == 200) {
+                    processMusic(xhr.responseText);
+                } else {
+                    const music = document.querySelector('.music');
+                    music.innerHTML = '<p>Music data could not be loaded :<</p>';
+                }
+            } else {
+                const music = document.querySelector('.music');
+                music.innerHTML = '<p>Music data could not be loaded :<</p>';
+            }
+        };
+    </script>
+{% endblock %}

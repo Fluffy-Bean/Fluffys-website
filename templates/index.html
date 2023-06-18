@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+{% block nav_home %}selected{% endblock %}
+
+{% block content %}
+    <div class="content">
+        <h1 data-value="Social-Media">Social-Media</h1>
+        <p class="subtitle" data-value="{{msg}}">{{msg}}</p>
+    </div>
+
+    <div class="content">
+        <a href="https://twitter.com/fluffybeanUwU" class="btn" data-value="Twitter">Twitter</a>
+        <a href="https://meow.social/@Fluffy_Bean" class="btn" data-value="Mastodon">Mastodon</a>
+        <a href="https://t.me/Fluffy_Bean" class="btn" data-value="Telegram">Telegram</a>
+        <a href="https://github.com/Fluffy-Bean" class="btn" data-value="Github">Github</a>
+        <button class="btn" data-value="Discord" id="discord">Discord</button>
+    </div>
+
+    <script>
+        document.getElementById("discord").onclick = function() {
+            try {
+                navigator.clipboard.writeText("Fluffy Bean#5212");
+                addToast("Copied to clipboard");
+            } catch (err) {
+                addToast("Error copying to clipboard, are you on HTTP?");
+            }
+        }
+    </script>
+{% endblock %}
