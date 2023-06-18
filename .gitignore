@@ -1,9 +1,10 @@
-### PostgreSQL template
+### Postgres template
 postgres
 
 ### Editors template
 .idea
 .vscode
+blogs
 
 ### Django template
 *.log
@@ -13,8 +14,9 @@ __pycache__/
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
-media
+# media # By default you dont want this to be commited, but I run my server on Docker so bleh
 CACHE
+/data
 
 # If your build process includes running collectstatic, then you probably don't need or want to include staticfiles/
 # in your Git repository. Update and uncomment the following line accordingly.

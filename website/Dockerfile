@@ -2,12 +2,17 @@
 FROM alpine:latest
 
 EXPOSE 8000
-WORKDIR /website
+RUN apk update && apk add build-base postgresql-client \
+    python3 py3-pip python3-dev --no-cache
+
+RUN mkdir /app
+WORKDIR /app
 
 COPY requirements.txt requirements.txt
-COPY ./website ./website
-
-RUN apk update && apk add python3 py3-pip
 RUN pip install -r requirements.txt
 
-CMD ["python3", "manage.py", "runserver", ""]
+COPY website .
+COPY run.sh run.sh
+RUN chmod +x run.sh
+
+CMD ["./run.sh"]

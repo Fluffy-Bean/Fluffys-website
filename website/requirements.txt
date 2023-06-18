@@ -1,7 +1,8 @@
 Gunicorn
-psycopg2-binary
-pillow
 django
+psycopg2-binary
+tzdata
+pillow
 django-libsass
 django-compressor
 django-markdownify
