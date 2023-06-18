@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <h1>Hello, stranger!</h1>
+    <h2>About Meeeeee</h2>
+    <p>My name is Fluffy, I'm an 18-year-old nerd, who likes to code and tinker with computers!</p>
+    <img src="{% static 'images/sneak.png' %}" alt="FluffyBean" style="width:11rem;float:right;" width="178" height="126">
+    <p>I specialise in Front-End development, but also enjoy working with the back end.
+        My Favorite framework currently is Flask, but this website runs on Django, lol</p>
+    <p>My favorite language is Python, but I also know how to use PHP, HTML, CSS/Sass, JavaScript,
+        Docker, SQL, Shell Scripting, and a little bit of Rust.</p>
+    <p>I also have experience in a few different systems, mainly Arch, Ubuntu and Proxmox.</p>
+
+    <h2>Projects</h2>
+    <p>I'm currently working on a few projects, including</p>
+    <div class="table">
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Language</th>
+                <th>Framework</th>
+            </tr>
+            <tr>
+                <td><a href="https://github.com/Derpy-Leggies/OnlyLegs">OnlyLegs</a></td>
+                <td>Python</td>
+                <td>Flask</td>
+            </tr>
+            <tr>
+                <td>Lynxie</td>
+                <td>Rust</td>
+                <td>Senerity</td>
+            </tr>
+            <tr>
+                <td>TheFrontRooms</td>
+                <td>C# & Python</td>
+                <td>Unity & Flask</td>
+            </tr>
+        </table>
+    </div>
+
+    <p>And some of my past project include</p>
+
+    <div class="table">
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Language</th>
+                <th>Framework</th>
+            </tr>
+            <tr>
+                <td><a href="https://github.com/Fluffy-Bean/image-gallery">OnlyLegs</a></td>
+                <td>PHP</td>
+                <td>I hate myself</td>
+            </tr>
+            <tr>
+                <td><a href="https://github.com/Fluffy-Bean/Joe_The_Bot">Joe The Bot</a></td>
+                <td>Python</td>
+                <td>discord.py</td>
+            </tr>
+            <tr>
+                <td>Twitter Archive Parser</td>
+                <td>PHP and Python</td>
+                <td>Raw Dogging</td>
+            </tr>
+        </table>
+    </div>
+
+    <h2>My Socials</h2>
+    <p>Here are my socials, if you want to stalk me</p>
+
+    <div class="button-array">
+        <a style="width: auto; padding:0.5rem 0.7rem" href="https://twitter.com/fluffybeanUwU">Twitter</a>
+        <a style="width: auto; padding:0.5rem 0.7rem" href="https://meow.social/@Fluffy_Bean">Mastodon</a>
+        <a style="width: auto; padding:0.5rem 0.7rem" href="https://t.me/Fluffy_Bean">Telegram</a>
+        <a style="width: auto; padding:0.5rem 0.7rem" href="https://github.com/Fluffy-Bean">Github</a>
+        <a style="width: auto; padding:0.5rem 0.7rem" href="https://www.last.fm/user/Fluffy_Bean_">LastFM</a>
+    </div>
+
+    <p style="margin-bottom: 0">Please don't message me with a "hi" or "hello, how are you". Start a meaningful conversation,
+    chances of me responding will be slim otherwise!</p>
+{% endblock %}

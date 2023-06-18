@@ -1,0 +1,25 @@
+version: "3.9"
+
+services:
+  db:
+    image: postgres:alpine
+    restart: unless-stopped
+    volumes:
+      - ./postgres:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+
+  website:
+    build: website
+    restart: unless-stopped
+    volumes:
+      - ./media:/website/media
+      - ./logs:/data/logs
+    environment:
+      DJANGO_KEY: ${DJANGO_KEY}
+      DB_HOST: db
+      DB_USER: ${POSTGRES_USER}
+      DB_PASSWORD: ${POSTGRES_PASSWORD}
+      DB_NAME: ${POSTGRES_DB}

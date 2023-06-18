@@ -1,0 +1,7 @@
+Gunicorn
+psycopg2-binary
+pillow
+django
+django-libsass
+django-compressor
+django-markdownify
