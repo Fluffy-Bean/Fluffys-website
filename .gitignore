@@ -14,7 +14,7 @@ __pycache__/
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
-# media # By default you dont want this to be commited, but I run my server on Docker so bleh
+# media # by default, you want this to be ignored, but there is nothing sensitive here os I dont care
 CACHE
 /data
 
