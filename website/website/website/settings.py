@@ -29,6 +29,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://*.leggy.dev',
+]
+
 
 # Application definition
 
@@ -124,7 +128,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = "static/"
+STATIC_URL = "static"
 STATICFILES_DIRS = (join(BASE_DIR, "static"),)
 STATICFILES_FINDERS = [
     "compressor.finders.CompressorFinder",
@@ -132,7 +136,7 @@ STATICFILES_FINDERS = [
     "django.contrib.staticfiles.finders.AppDirectoriesFinder",
 ]
 
-MEDIA_URL = "media/"
+MEDIA_URL = "media"
 MEDIA_ROOT = join(BASE_DIR, "media")
 
 COMPRESS_ROOT = join(BASE_DIR, "static/")

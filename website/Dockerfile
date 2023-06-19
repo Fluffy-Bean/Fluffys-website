@@ -11,7 +11,7 @@ WORKDIR /app
 COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 
-COPY website .
+COPY ./website/ /app/
 COPY run.sh run.sh
 RUN chmod +x run.sh
 
