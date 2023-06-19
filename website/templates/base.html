@@ -1,0 +1,35 @@
+{% load static %}
+{% load compress %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{% block title %}Leggy Land{% endblock %}</title>
+
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1"/>
+        <meta name="description" content="{% block description %}Fluffy's mid-ass page{% endblock %}"/>
+        <link rel="shortcut icon" type="image/png" href="{% static 'icon.jpg' %}"/>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Mono&display=swap" rel="stylesheet"/>
+
+        {% compress css %}
+            <link type="text/x-sass" href="{% static 'sass/styles.sass' %}" rel="stylesheet" media="screen"/>
+        {% endcompress %}
+    </head>
+
+    <body>
+        {% block navigation %}{% include 'navigation.html' %}{% endblock %}
+        {% block header %}{% endblock %}
+        <main>{% block content %}{% endblock %}</main>
+        <footer>{% block footer %}{% include 'footer.html' %}{% endblock %}</footer>
+    </body>
+
+    {% block scripts %}{% endblock %}
+    {% compress js %}
+        <script src="{% static 'js/navigation.js' %}" defer></script>
+        <script src="{% static 'js/scroll.js' %}" defer></script>
+    {% endcompress %}
+</html>
