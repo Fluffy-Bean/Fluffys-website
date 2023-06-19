@@ -1,0 +1,53 @@
+.button-array
+    display: flex
+    flex-wrap: wrap
+    justify-content: start
+
+    p
+        margin: 0 0.2rem 0 0
+        padding: 0 0.5rem
+
+        height: 2rem
+
+        display: flex
+        align-items: center
+
+        font-size: 0.9rem
+        font-family: $font-mono
+
+        background: $dark
+        color: $light
+        border-radius: $radius
+
+    button, a
+        margin: 0 0.2rem 0.2rem 0
+        padding: 0
+
+        width: 2rem
+        height: 2rem
+
+        display: flex
+        justify-content: center
+        align-items: center
+
+        font-size: 0.9rem
+        font-family: $font-mono
+        text-decoration: none
+
+        background-color: $accent
+        color: $dark
+        border: 0 solid transparent
+        border-radius: $radius
+
+        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out
+
+        svg
+            width: 1.1rem
+            height: 1.1rem
+            color: inherit
+
+        &:hover, &:focus-visible
+            text-decoration: none
+            background-color: $dark
+            color: $light
+            outline: none
