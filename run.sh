@@ -1,9 +1,8 @@
 #!/bin/sh
 
-APP_NAME='website.wsgi:application'
+APP='website.wsgi:application'
+PATH='/var/www/html/Fluffys-website'
+PORT=8000
 WORKERS=3
-BIND=':8000'
 
-/usr/bin/poetry run gunicorn ${APP_NAME} \
-    --workers ${WORKERS} \
-    --bind ${BIND}
+PING=$(/usr/bin/python3 -m gunicorn -w ${WORKERS} -b :$PORT --chdir $PATH $APP)
