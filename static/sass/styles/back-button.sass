@@ -1,0 +1,39 @@
+.back
+    padding: 0
+    width: 3rem
+    height: 3rem
+
+    display: flex
+    justify-content: center
+    align-items: center
+
+    position: fixed
+    right: 1.3rem
+    bottom: 1.3rem
+
+    outline: 0.5rem solid $light
+    border: 0 solid transparent
+    border-radius: 50%
+    background: $dark
+
+    transition: transform 0.2s ease-in-out
+    cursor: pointer
+    z-index: 10
+
+    svg
+        display: block
+        width: 1.4rem
+        height: 1.4rem
+        color: $light
+
+    &:hover, &:focus-visible
+        text-decoration: none
+        transform: translateY(-0.2rem)
+
+@media (prefers-color-scheme: dark)
+    .back
+        outline-color: $dark
+        background: $light
+
+        svg
+            color: $dark

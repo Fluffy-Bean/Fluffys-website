@@ -9,7 +9,7 @@
     <header>
         <img src="{{ article.thumb.url }}" alt="{{ article.title }}">
         <h1>{{ article.title }}</h1>
-        <p>{{ article.date }}</p>
+        <p>{{ article.date|date:"jS M, Y" }}</p>
     </header>
 {% endblock %}
 

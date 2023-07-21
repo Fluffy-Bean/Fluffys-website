@@ -33,3 +33,18 @@
     .table table
         th, td
             padding: 0.25rem
+
+@media (prefers-color-scheme: dark)
+    .table
+        border: 1px solid $light
+
+        table
+            tr
+                border-bottom: 1px solid $light
+
+            th, td
+                border-right: 1px solid $light
+
+            th
+                background: $light
+                color: $dark

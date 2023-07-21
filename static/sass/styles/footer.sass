@@ -6,23 +6,17 @@ footer
     flex-direction: column
     justify-content: center
     align-items: center
+    text-align: center
+    font-size: 0.9rem
 
-    background-color: $light
-    color: $dark
-
-    p
+    p, a
         margin: 0
-        font-size: 0.9rem
-        text-align: center
-        color: inherit
 
     a
-        margin: 0
-        font-size: 0.9rem
-
         text-decoration: none
         color: $accent
         cursor: pointer
 
-        &:hover
+        &:hover, &:focus-visible
             text-decoration: underline
+            outline: 0 solid transparent

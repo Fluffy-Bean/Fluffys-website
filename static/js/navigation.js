@@ -1,12 +1,12 @@
+const nav = document.querySelector('nav');
+const button = document.querySelector('.nav-toggle');
+
 let navRotate = 0;
 let increment = 45;
 
 function toggleNav() {
-    let nav = document.querySelector('nav');
-    let button = document.querySelector('.nav-toggle');
-
     navRotate += increment;
-    button.style.transform = `rotate(${navRotate}deg)`;
+    button.querySelector('svg').style.transform = `rotate(${navRotate}deg)`;
 
     if (nav.classList.contains('open')) {
         document.querySelector('body').style.overflow = 'auto';

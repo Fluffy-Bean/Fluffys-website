@@ -3,6 +3,10 @@
     flex-wrap: wrap
     justify-content: start
 
+    font-size: 0.9rem
+    font-family: $font-mono
+    text-decoration: none
+
     p
         margin: 0 0.2rem 0 0
         padding: 0 0.5rem
@@ -11,9 +15,7 @@
 
         display: flex
         align-items: center
-
-        font-size: 0.9rem
-        font-family: $font-mono
+        font-family: inherit
 
         background: $dark
         color: $light
@@ -30,24 +32,31 @@
         justify-content: center
         align-items: center
 
-        font-size: 0.9rem
-        font-family: $font-mono
-        text-decoration: none
+        font-family: inherit
 
         background-color: $accent
         color: $dark
         border: 0 solid transparent
         border-radius: $radius
 
-        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out
+        // transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out
 
         svg
             width: 1.1rem
             height: 1.1rem
-            color: inherit
 
         &:hover, &:focus-visible
             text-decoration: none
-            background-color: $dark
-            color: $light
-            outline: none
+            background-color: transparent
+            color: $dark
+            outline: 0 solid transparent
+
+@media (prefers-color-scheme: dark)
+    .button-array
+        p
+            background: $light
+            color: $dark
+
+        button, a
+            &:hover, &:focus-visible
+                color: $light

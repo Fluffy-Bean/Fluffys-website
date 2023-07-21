@@ -13,6 +13,7 @@ $font-mono: 'IBM Plex Mono', monospace
 @import "styles/table"
 @import "styles/art-block"
 @import "styles/button-array"
+@import "styles/back-button"
 
 *
     font-family: $font
@@ -27,6 +28,13 @@ $font-mono: 'IBM Plex Mono', monospace
 html
     font-size: 1rem
     background-color: $light
+    color: $dark
+    transition: background 0.1s ease-in-out
+
+@media (prefers-color-scheme: dark)
+    html
+        background-color: $dark
+        color: $light
 
 body
     margin: 0
@@ -34,40 +42,8 @@ body
     min-height: 100vh
     display: flex
     flex-direction: column
-    color: $dark
-
-.back
-    padding: 0
-    width: 3rem
-    height: 3rem
-
-    display: flex
-    justify-content: center
-    align-items: center
-
-    position: fixed
-    right: 1.3rem
-    bottom: 1.3rem
-
-    border: 0 solid transparent
-    border-radius: 50%
-    background: $dark
-    box-shadow: 0 0 0.35rem rgba(0, 0, 0, 0.4)
-
-    cursor: pointer
-    z-index: 10
-
-    svg
-        display: block
-        width: 1.4rem
-        height: 1.4rem
-        color: $light
-
-    &:hover
-        text-decoration: none
 
 .scroll
-    width: 0
     height: 0.3rem
 
     position: fixed
@@ -90,15 +66,17 @@ header
 
     background-color: $dark
     color: $light
+
     box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.2)
-    z-index: 2
     overflow: hidden
+    z-index: 2
 
     img
         width: 100%
         height: 100%
         position: absolute
-        inset: 0
+        top: 0
+        left: 0
         object-fit: cover
 
     h1
@@ -148,14 +126,23 @@ main
 
     h1
         margin: 0 0 0.5rem 0
+        position: relative
         font-size: 2.5rem
         color: $accent
+        overflow: hidden
+        opacity: 0
+
+        span
+            position: absolute
+            transition: transform 0.5s cubic-bezier(.18,.89,.32,1.28)
 
     a
         color: $accent
         text-decoration: none
-        &:hover
+
+        &:hover, &:focus-visible
             text-decoration: underline
+            outline: 0 solid transparent
 
 .article
     margin: 0 0 0.5rem 0
@@ -166,8 +153,6 @@ main
     position: relative
 
     text-decoration: none
-    background: $light
-    color: $dark
 
     h2
         margin: 0 0.5rem 0.2rem 0
@@ -177,8 +162,8 @@ main
         white-space: nowrap
         text-overflow: ellipsis
 
-        background: inherit
-        color: inherit
+        background: $light
+        color: $dark
 
         overflow: hidden
         transition: color 0.1s ease-in-out
@@ -191,8 +176,8 @@ main
         font-size: 1rem
         white-space: nowrap
 
-        background: inherit
-        color: inherit
+        background: $light
+        color: $dark
 
         transition: color 0.1s ease-in-out
         z-index: +1
@@ -212,8 +197,23 @@ main
         transition: background 0.1s ease-in-out
 
     &:hover
-        color: $accent
         text-decoration: none
+
+        h2, p
+            color: $accent
+
+@media (prefers-color-scheme: dark)
+    .article
+        h2
+            background: $dark
+            color: $light
+
+        p
+            background: $dark
+            color: $light
+
+        &::after
+            border-top: 1px $light dotted
 
 @media (max-width: 600px)
     .article

@@ -4,7 +4,7 @@
     {% for article in articles %}
         <a href="{% url 'articles:detail' slug=article.slug %}" class="article">
             <h2>{{ article.title }}</h2>
-            <p>{{ article.date|date:"jS M, Y" }}</p>
+            <p>{{ article.date|timesince }}</p>
         </a>
     {% endfor %}
 {% endblock %}

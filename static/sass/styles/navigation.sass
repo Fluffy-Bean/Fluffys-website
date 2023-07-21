@@ -15,7 +15,6 @@ nav
 
     border-radius: 0
     background-color: $dark
-    color: $light
 
     opacity: 0
     transform: translateY(-1rem)
@@ -80,13 +79,13 @@ nav
     width: 3rem
     height: 3rem
 
+    outline: 0.5rem solid $light
     border: 0 solid transparent
     border-radius: 50%
     background: $dark
     color: $light
-    box-shadow: 0 0 0.35rem rgba(0, 0, 0, 0.4)
 
-    transition: all 0.2s ease-in-out
+    transition: transform 0.2s ease-in-out, outline-color 0.2s ease-in-out
     cursor: pointer
     z-index: 9999
 
@@ -95,7 +94,19 @@ nav
         width: 1.4rem
         height: 1.4rem
         color: inherit
+        transition: transform 0.2s ease-in-out
 
     &.open
+        outline-color: $dark
         background: $light
+        color: $dark
+
+    &:hover, &:focus-visible
+        text-decoration: none
+        transform: translateY(-0.2rem)
+
+@media (prefers-color-scheme: dark)
+    .nav-toggle
+        outline-color: $dark
+        background-color: $light
         color: $dark

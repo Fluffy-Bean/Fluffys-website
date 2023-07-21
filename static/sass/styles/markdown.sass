@@ -45,3 +45,15 @@
         padding: 0 0.6rem
         font-style: italic
         border-left: 0.2rem solid $accent
+@media (prefers-color-scheme: dark)
+    .markdown
+        code
+            background-color: $light
+            color: $dark
+
+        pre
+            border: 1px solid $light
+
+            > code
+                background-color: $dark
+                color: $light
