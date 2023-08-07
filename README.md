@@ -3,15 +3,20 @@ My little Django website + blog
 ## Installation
 Clone this repo and cd into it
 
-### Running
+### Install dependencies
 ```bash
-docker-compose up
+poetry update
 ```
 
 ### First time setup
 
 ```bash
-docker-compose exec website python3 /app/manage.py createsuperuser
+poetry run python3 manage.py createsuperuser
+```
+
+### Running
+```bash
+poetry run gunicorn -w 4 -b :6969 --chdir /var/www/html/Fluffys-website website.wsgi:application
 ```
 
 ok bye!
