@@ -4,10 +4,9 @@ from articles.models import Article
 
 
 def article_list(request):
-    articles = (Article.objects.defer('body')
-                       .filter(published=True)
-                       .order_by("-date")
-                       .all())
+    articles = (
+        Article.objects.defer("body").filter(published=True).order_by("-date").all()
+    )
     return render(request, "views/articles.html", {"articles": articles})
 
 
