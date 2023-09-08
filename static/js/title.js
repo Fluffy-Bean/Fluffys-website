@@ -8,24 +8,26 @@ title.textContent = '';
 title.style.height = titleHeight + 'px';
 title.style.opacity = "1";
 
-titleText.split('').forEach((letter) => {
-    let span = document.createElement('span');
+document.addEventListener('DOMContentLoaded', () => {
+    titleText.split('').forEach((letter) => {
+        let span = document.createElement('span');
 
-    span.textContent = letter;
-    span.style.left = letterOffset + 'px';
-    span.style.transform = 'translateY(100%)';
+        span.textContent = letter;
+        span.style.left = letterOffset + 'px';
+        span.style.transform = 'translateY(100%)';
 
-    title.append(span);
+        title.append(span);
+
+        setTimeout(() => {
+            span.style.transform = '';
+        }, timeOffset);
+
+        letterOffset += span.offsetWidth + 2.5;
+        timeOffset += 100;
+    });
 
     setTimeout(() => {
-        span.style.transform = '';
-    }, timeOffset);
-
-    letterOffset += span.offsetWidth;
-    timeOffset += 100;
+        title.textContent = '';
+        title.textContent = titleText;
+    }, timeOffset + 500);
 });
-
-setTimeout(() => {
-    title.textContent = '';
-    title.textContent = titleText;
-}, timeOffset + 500);
